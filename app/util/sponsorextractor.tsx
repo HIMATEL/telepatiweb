@@ -1,3 +1,11 @@
-import sponsorIndexes from "./sponsors.json";
+export const sponsorLists: {Gold: any[], Silver: any[], Bronze: any[]} = {
+   Gold:[
 
-export const sponsorLists = sponsorIndexes;
+   ],
+   Silver:[
+
+   ],
+   Bronze:[
+
+   ]
+}
