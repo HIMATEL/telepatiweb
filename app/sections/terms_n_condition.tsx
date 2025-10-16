@@ -16,7 +16,7 @@ export default function TermsAndConditions() {
 
                   {/* Terms Card */}
                   <div className="bg-blue-900/80 backdrop-blur-sm border border-blue-700/50 rounded-2xl p-8 shadow-2xl shadow-blue-900/20 hover:shadow-blue-800/30 transition-all duration-300 hover:scale-[1.02] flex-1 text-justify">
-                     <div className="space-y-4 text-white/90 leading-relaxed">
+                     <div className="text-sm md:text-md space-y-4 text-white/90 leading-relaxed">
                         <p>
                            Tema <span className="relative inline-block bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent font-semibold after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-green-400 after:to-cyan-400 after:shadow-[0_0_8px_rgba(34,197,94,0.6),0_0_16px_rgba(6,182,212,0.4)] after:animate-pulse">"Connected Green Future with IoT"</span> mendorong peserta untuk menciptakan solusi IoT yang dapat membantu menjaga kelestarian lingkungan.
                            Peserta ditantang untuk menghadirkan inovasi yang bermanfaat dalam kehidupan sehari-hari, seperti pemantauan kualitas udara, pengelolaan limbah dan sampah, sistem irigasi pintar, hingga deteksi kondisi tanah dan cuaca.

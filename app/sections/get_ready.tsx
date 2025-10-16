@@ -25,7 +25,7 @@ export default function GetReady() {
 
                   <LinkButton
                      link={links.pendaftaran}
-                     text="Daftar Sekarang"
+                     text="Link Pendaftaran"
                      isInverted={true}
                   />
                </div>
