@@ -11,16 +11,16 @@ import SponsorsNMedparts from "./sections/sponsors_n_medparts";
 
 // Page-specific SEO metadata
 export const metadata: Metadata = {
-  title: "Home - Telepati 7.0 IoT Hackathon",
-  description: "Welcome to Telepati 7.0 - Indonesia's premier IoT hackathon for environmental sustainability. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  title: "Telepati 7.0 - Connected Green Future with IoT",
+  description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
   openGraph: {
     title: "Telepati 7.0 - Connected Green Future with IoT",
-    description: "Join the largest IoT hackathon in Indonesia focusing on environmental solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    url: "https://telepati.polban.ac.id",
+    description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
+    url: "https://polbantelepati.tech",
     type: "website",
   },
   alternates: {
-    canonical: "https://telepati.polban.ac.id",
+    canonical: "https://polbantelepati.tech",
   },
 };
 
@@ -29,7 +29,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Telepati 7.0 - Connected Green Future with IoT",
-    "description": "Indonesia's premier IoT hackathon focused on environmental sustainability and green technology solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "description": "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
     "startDate": "2024-07-01",
     "endDate": "2024-07-06",
     "location": {

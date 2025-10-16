@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Telepati 7.0 - Connected Green Future with IoT",
-  description: "Join Telepati 7.0, Indonesia's premier IoT hackathon focused on environmental sustainability. Connect, innovate, and build the green future through cutting-edge IoT solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  keywords: ["Telepati 7.0", "IoT", "hackathon", "sustainability", "green technology", "environmental innovation", "Indonesia", "competition", "smart city", "internet of things"],
+  description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
+  keywords: ["Telepati 7.0", "Politeknik Negeri Bandung", "Polban", "Himatel", "Himpunan Mahasiswa Teknik Telekomunikasi", "HMJE", "Himpunan Mahasiswa Jurusan Elektro", "IoT", "hackathon", "sustainability", "green technology", "environmental innovation", "Indonesia", "competition", "smart city", "internet of things"],
   authors: [{ name: "Himatel Polban" }],
   creator: "Politeknik Negeri Bandung",
   publisher: "Politeknik Negeri Bandung",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     url: "https://polbantelepati.tech",
     title: "Telepati 7.0 - Connected Green Future with IoT",
-    description: "Join Indonesia's premier IoT hackathon for environmental sustainability. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+    description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
     siteName: "Telepati 7.0",
   },
   alternates: {
