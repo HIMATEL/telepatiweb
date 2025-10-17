@@ -25,6 +25,7 @@ export default function SponsorsNMedparts() {
       { id: 2, name: "Himakom Polban", link: "https://instagram.com/himakompolban", src: `${GOOGLE_DRIVE_BASE_URL}12_0J_Xd8x26TiF3FnEXGmCbO5y0Euyf3` },
       { id: 3, name: "Eltras Radio Polban", link: "https://instagram.com/eltrasradio1079", src: `${GOOGLE_DRIVE_BASE_URL}1RoybpoHvq7AuFOxllOpb4fUVLVJjvnYb` },
       { id: 4, name: "Polban Electric Vehichle", link: "https://instagram.com/polban.ev", src: `${GOOGLE_DRIVE_BASE_URL}1t-x5N8Z4IQ63yjyDgAIgK9C6wT10-j4V` },
+      { id: 5, name: "Polban News", link: "https://instagram.com/polban_news", src: `${GOOGLE_DRIVE_BASE_URL}19MqIGB_kdgehuuME2wFdKVlDQz_U1xc4` },
    ];
 
    const LogoPlaceholder = ({ name }: { name: string }) => (
