@@ -15,8 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Telepati 7.0 - Connected Green Future with IoT",
-  description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
+  metadataBase: new URL("https://polbantelepati.tech"),
+  title: {
+    default: "Telepati 7.0 - Connected Green Future with IoT",
+    template: "%s | Telepati",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+  assets: ["/favicon.ico"],
+  description: "Telepati merupakan program kerja tahunan berupa perlombaan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
   keywords: ["Telepati 7.0", "Politeknik Negeri Bandung", "Polban", "Himatel", "Himpunan Mahasiswa Teknik Telekomunikasi", "HMJE", "Himpunan Mahasiswa Jurusan Elektro", "IoT", "hackathon", "sustainability", "green technology", "environmental innovation", "Indonesia", "competition", "smart city", "internet of things"],
   authors: [{ name: "Himatel Polban" }],
   creator: "Politeknik Negeri Bandung",
@@ -29,7 +38,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     url: "https://polbantelepati.tech",
     title: "Telepati 7.0 - Connected Green Future with IoT",
-    description: "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
+    description: "Telepati merupakan program kerja tahunan berupa perlombaan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
     siteName: "Telepati 7.0",
   },
   alternates: {

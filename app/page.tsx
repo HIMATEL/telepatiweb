@@ -29,7 +29,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Telepati 7.0 - Connected Green Future with IoT",
-    "description": "Telepati merupakan program kerja tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
+    "description": "Telepati merupakan program kerja tahunan berupa perlombaan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Dalam 6 tahun terakhir, kami telah membangun reputasi sebagai penyelenggara program-program yang berkontribusi dalam pengembangan dan pemahaman teknologi di kalangan siswa SMA/SMK dan mahasiswa, khususnya di bidang Telekomunikasi.",
     "startDate": "2024-07-01",
     "endDate": "2024-07-06",
     "location": {
