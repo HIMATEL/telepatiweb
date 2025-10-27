@@ -7,12 +7,20 @@ export default function FaqSection() {
 
    const faqs = [
       {
+         title: "Seperti apa Lomba Telepati 7.0 ini?",
+         description: "Lomba Telepati 7.0 adalah sebuah kompetisi IoT yang diikuti oleh mahasiswa aktif Diploma atau Sarjana maksimal hingga semester 5, atau pelajar aktif SMA/SMK di wilayah Jawa Barat. Peserta akan membentuk tim yang terdiri dari 2-5 orang untuk mengembangkan solusi inovatif berbasis IoT sesuai dengan tema yang telah ditentukan. Untuk bisa mengikuti lomba ini, peserta harus mendaftar secara online form pendaftaran yang tertera pada link di Guidebook atau pada Website ini. Setelah itu, peserta diharapkan dapat mengirimkan proposal sebelum tenggat waktu yang ditentukan, yang nantinya akan dinilai oleh juri. Tim yang lolos seleksi proposal akan melanjutkan ke tahap final, di mana mereka akan mempresentasikan karya mereka di hadapan juri dan peserta lainnya di kampus Politeknik Negeri Bandung.",
+      },
+      {
          title: "Apakah Lomba Telepati 7.0 Berbayar?",
          description: "Lomba Telepati 7.0 ini berbayar, peserta diperlukan untuk membayar biaya administrasi sebesar Rp 50.000,- per tim untuk mengikuti lomba ini. Pembayaran dapat dilakukan melalui transfer bank ke nomor rekening yang telah disediakan oleh panitia yang tertera pada Guide Book.",
       },
       {
          title: "Saya berada di Jawa Barat, akan tetapi bukan dari Bandung. Apakah saya tetap bisa mendaftar?",
          description: "Tentunya bisa! Lomba ini terbuka untuk seluruh mahasiswa aktif Diploma atau Sarjana, maksimal hingga semester 5, atau pelajar aktif SMA/SMK yang berasal dari universitas atau sekolah di wilayah Jawa Barat. Kami juga akan menyediakan akomodasi bagi peserta yang lolos ke tahap final yang berasal dari luar Bandung. Untuk bisa tampil di kampus Politeknik Negeri Bandung.",
+      },
+      {
+         title: "Saya berada di luar Jawa Barat. Apakah saya tetap bisa mendaftar?",
+         description: "Tentu bisa, akan tetapi kami tidak menyediakan akomodasi bagi peserta yang berasal dari luar Jawa Barat. Peserta dari luar Jawa Barat tetap dapat mengikuti lomba ini dengan syarat dan ketentuan yang berlaku.",
       },
       {
          title: "Siapa saja yang menilai proposal dan karya kami?",
