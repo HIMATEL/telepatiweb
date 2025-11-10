@@ -1,8 +1,11 @@
+'use client';
+
 import { LinkButton } from "../components/button";
 import { links } from "../util/links";
+import { CountdownTimer, useRegistrationStatus } from "../components/CountdownTimer";
 
 export default function GetReady() {
-   return (
+   const isRegistrationClosed = useRegistrationStatus();   return (
       <>
          <section className="flex relative justify-center flex-col items-center px-10 py-20">
             <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8">
@@ -16,18 +19,34 @@ export default function GetReady() {
                   </h1>
                </div>
 
-               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 items-center">
-                  <LinkButton
-                     link={links.guidebook}
-                     text="Guidebook Telepati 7.0"
-                     isInverted={false}
-                  />
+               <div className="flex flex-col gap-6 items-center">
+                  {/* Countdown Timer */}
+                  {!isRegistrationClosed && <CountdownTimer />}
 
-                  <LinkButton
-                     link={links.pendaftaran}
-                     text="Link Pendaftaran"
-                     isInverted={true}
-                  />
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 items-center">
+                     {isRegistrationClosed ? (
+                        <div className="bg-blue-900/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center max-w-2xl">
+                           <p className="text-lg sm:text-xl text-white font-semibold">
+                              Pendaftaran sudah ditutup, finalis akan diumumkan nanti
+                           </p>
+                        </div>
+                     ) : (
+                        <>
+                           <LinkButton
+                              link={links.guidebook}
+                              text="Guidebook Telepati 7.0"
+                              isInverted={false}
+                           />
+
+                           <LinkButton
+                              link={links.pendaftaran}
+                              text="Link Pendaftaran"
+                              isInverted={true}
+                           />
+                        </>
+                     )}
+                  </div>
                </div>
             </div>
          </section>
