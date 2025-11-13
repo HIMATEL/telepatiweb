@@ -9,7 +9,7 @@ export default function Timeline() {
          title: "Pendaftaran Batch 2",
       },
       {
-         date: "10 November - 14 November 2025",
+         date: "10 November - 16 November 2025",
          title: "Penyeleksian 10 Besar Finalis",
       },
       {
