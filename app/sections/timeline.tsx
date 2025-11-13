@@ -13,7 +13,7 @@ export default function Timeline() {
          title: "Penyeleksian 10 Besar Finalis",
       },
       {
-         date: "15 Novemmber 2025",
+         date: "17 Novemmber 2025",
          title: "Pengumuman 10 Besar Finalis",
       },
       {
