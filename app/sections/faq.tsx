@@ -15,10 +15,6 @@ export default function FaqSection() {
          description: "Lomba Telepati 7.0 ini berbayar, peserta diperlukan untuk membayar biaya administrasi sebesar Rp 50.000,- per tim untuk mengikuti lomba ini. Pembayaran dapat dilakukan melalui transfer bank ke nomor rekening yang telah disediakan oleh panitia yang tertera pada Guide Book.",
       },
       {
-         title: "Saya berada di Jawa Barat, akan tetapi bukan dari Bandung. Apakah saya tetap bisa mendaftar?",
-         description: "Tentunya bisa! Lomba ini terbuka untuk seluruh mahasiswa aktif Diploma atau Sarjana, maksimal hingga semester 5, atau pelajar aktif SMA/SMK yang berasal dari universitas atau sekolah di wilayah Jawa Barat. Kami juga akan menyediakan akomodasi bagi peserta yang lolos ke tahap final yang berasal dari luar Bandung. Untuk bisa tampil di kampus Politeknik Negeri Bandung.",
-      },
-      {
          title: "Saya berada di luar Jawa Barat. Apakah saya tetap bisa mendaftar?",
          description: "Tentu bisa, akan tetapi kami tidak menyediakan akomodasi bagi peserta yang berasal dari luar Jawa Barat. Peserta dari luar Jawa Barat tetap dapat mengikuti lomba ini dengan syarat dan ketentuan yang berlaku.",
       },
