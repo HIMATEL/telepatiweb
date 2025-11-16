@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { GOOGLE_DRIVE_BASE_URL, links } from '../util/links';
 import { LinkButton } from '../components/button';
+import { sponsorLists } from '../util/sponsorextractor';
 
 export default function SponsorsNMedparts() {
    const [isMobile, setIsMobile] = useState(false);
@@ -17,8 +18,7 @@ export default function SponsorsNMedparts() {
 
       return () => window.removeEventListener('resize', checkIsMobile);
    }, []);
-   const sponsors: any[] = [
-   ];
+   const sponsors = [...sponsorLists.Gold, ...sponsorLists.Silver, ...sponsorLists.Bronze];
 
    const mediaPartners = [
       { id: 1, name: "HME Polban", link: "https://instagram.com/hmepolban", src: `${GOOGLE_DRIVE_BASE_URL}1AA9t66DGTkuByXLvXw-7rDKfWlIHXtob` },
@@ -141,7 +141,7 @@ export default function SponsorsNMedparts() {
                   <div key={setIndex} className="flex">
                      {items.map((item) => (
                         <div key={`${setIndex}-${item.id}`} className="block">
-                           {isMediaPartner && item.src ? (
+                           {item.src ? (
                               <a href={item.link} target="_blank" rel="noopener noreferrer" className="block group">
                                  <div className="w-64 h-32 flex-shrink-0 bg-gray-300/20 backdrop-blur-sm border border-blue-700/30 rounded-xl flex items-center justify-center group-hover:border-blue-500/50 transition-all duration-300 mx-3 overflow-hidden">
                                     <img
@@ -163,11 +163,11 @@ export default function SponsorsNMedparts() {
       );
    };
 
-   const StaticGrid = ({ items, isMediaPartner = false }: { items: any[], isMediaPartner?: boolean }) => (
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
+   const StaticGrid = ({ items }: { items: any[], isMediaPartner?: boolean }) => (
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
          {items.map((item) => (
-            <div key={item.id} className="block w-full max-w-xs">
-               {isMediaPartner && item.src ? (
+            <div key={item.id} className="block w-full max-w-xs sm:w-64">
+               {item.src ? (
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="block group">
                      <div className="w-full h-32 bg-gray-300/20 backdrop-blur-sm border border-blue-700/30 rounded-xl flex items-center justify-center group-hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
                         <img
