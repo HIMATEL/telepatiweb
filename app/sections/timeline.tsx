@@ -21,7 +21,7 @@ export default function Timeline() {
          title: "Technichal Meeting",
       },
       {
-         date: "29 November 2025",
+         date: "30 November 2025",
          title: "Demonstrasi Karya Secara Offline",
       },
    ];
