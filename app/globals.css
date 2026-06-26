@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===========================
+   TELEPATI 8.0 DESIGN TOKENS
+   =========================== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-inter);
+
+  /* Telepati 8.0 Color System */
+  --color-primary: #006b30;
+  --color-secondary: #785a00;
+  --color-surface: #ffffff;
+  --color-surface-variant: #F0FDF4;
+  --color-surface-container: #d9f4e3;
+  --color-surface-container-low: #defae9;
+  --color-surface-container-high: #d3efde;
+  --color-on-surface: #082016;
+  --color-on-surface-variant: #3e4a3e;
+  --color-error: #EF4444;
+  --color-primary-container: #00873f;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #f7fff3;
+  --color-secondary-container: #fdc425;
+  --color-border-low: #061e141a;
+  --color-outline-variant: #bdcabb;
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #ffffff;
+  --foreground: #082016;
+}
+
+/* ===========================
+   HERO ANIMATIONS
+   =========================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-logo-reveal {
+  animation: fadeUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.intro-lock {
+  overflow: hidden !important;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-text-reveal {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+}
+
+.header-anim {
+  opacity: 0;
+  animation: fadeIn 0.7s ease 1.5s forwards;
+}
+
+/* Skip animations if hash is present */
+.skip-animation .hero-logo-reveal,
+.skip-animation .hero-text-reveal,
+.skip-animation .header-anim {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ===========================
+   NEO-BRUTALIST UTILITIES
+   =========================== */
+@layer utilities {
+  .neo-button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-[#006b30] px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-[1] text-white shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_#061E14] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+  }
+
+  .neo-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-[#fdc425] px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-[1] text-[#061E14] shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_#061E14] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+  }
+
+  .bento-card {
+    @apply bg-[#F0FDF4] border border-[#061E14]/10;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
