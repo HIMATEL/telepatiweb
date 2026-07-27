@@ -23,11 +23,11 @@ export default function Competitions() {
           {/* Card 1: IoT */}
           <div className="bento-card flex flex-col h-full rounded-[2rem] p-8 md:p-12 relative overflow-hidden group border-2 border-[#082016] hover:shadow-[5px_5px_0px_#082016] transition-all duration-300">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#006b30]/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform" />
-            <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-[#082016] bg-[#ffdf9a] text-[#082016] text-[12px] leading-[1] tracking-[0.05em] font-medium uppercase mb-6 shadow-[2px_2px_0px_#082016]">
-              Hardware & Sensors
+            <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-[#082016] bg-[#ffdf9a] text-[#082016] text-[12px] leading-[1] tracking-[0.05em] font-medium mb-6 shadow-[2px_2px_0px_#082016]">
+              Internet of Things (IoT) Agriculture Track
             </div>
             <h3 className="font-(family-name:--font-jakarta) text-[32px] leading-[1.2] font-bold text-[#082016] mb-4">
-              Internet of Things (IoT) Agriculture
+              Agro-IoT Innovation Challenge
             </h3>
             <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-[#3e4a3e] mb-8">
               Rancang sistem cerdas berbasis mikrokontroler dan sensor untuk
@@ -55,11 +55,11 @@ export default function Competitions() {
           {/* Card 2: AI */}
           <div className="bento-card flex flex-col h-full rounded-[2rem] p-8 md:p-12 relative overflow-hidden group border-2 border-[#082016] hover:shadow-[5px_5px_0px_#082016] transition-all duration-300">
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#785a00]/10 rounded-br-full -z-10 group-hover:scale-110 transition-transform" />
-            <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-[#082016] bg-[#ffdf9a] text-[#082016] text-[12px] leading-[1] tracking-[0.05em] font-medium uppercase mb-6 shadow-[2px_2px_0px_#082016]">
-              Machine Learning & Data
+            <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-[#082016] bg-[#ffdf9a] text-[#082016] text-[12px] leading-[1] tracking-[0.05em] font-medium mb-6 shadow-[2px_2px_0px_#082016]">
+              ML Training & Case Study Track
             </div>
             <h3 className="font-(family-name:--font-jakarta) text-[32px] leading-[1.2] font-bold text-[#082016] mb-4">
-              AI Training & Case Study
+              Agri-Data Intelligence Race
             </h3>
             <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-[#3e4a3e] mb-8">
               Kembangkan model machine learning untuk memecahkan studi kasus

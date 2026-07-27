@@ -4,6 +4,7 @@ import "./globals.css";
 import IntroManager from "./components/IntroManager";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { Analytics } from "@vercel/analytics/next";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -85,9 +86,10 @@ export default function RootLayout({
         className={`${jakarta.variable} ${exo2.variable} ${inter.variable} antialiased`}
       >
         <IntroManager />
-        <Header/>
+        {/* <Header/> */}
         {children}
-        <Footer />
+        <Analytics/>
+        {/* <Footer /> */}
       </body>
     </html>
   );

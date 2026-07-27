@@ -9,7 +9,7 @@ export default function Recap() {
       <div className="max-w-[1152px] mx-auto relative z-10">
         <ScrollReveal className="text-center mb-16">
           <h2 className="font-(family-name:--font-jakarta) text-[32px] md:text-[48px] font-extrabold mb-4">
-            Jejak Langkah Telepati 7.0
+            Jejak Langkah Telepati
           </h2>
           <p className="font-(family-name:--font-inter) text-lg text-white/80 max-w-2xl mx-auto">
             Melihat kembali antusiasme dan inovasi luar biasa dari para finalis
@@ -22,7 +22,7 @@ export default function Recap() {
           <ScrollReveal className="md:col-span-2 bento-card rounded-2xl overflow-hidden border-2 border-[#082016] h-[300px] md:h-[400px] relative group">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-              alt="Telepati 7.0 Recap"
+              alt="Telepati 8.0 Recap"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               unoptimized
@@ -40,7 +40,7 @@ export default function Recap() {
             <ScrollReveal className="bento-card rounded-2xl overflow-hidden border-2 border-[#082016] relative group">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-                alt="Telepati 7.0 Winners"
+                alt="Telepati 8.0 Winners"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 unoptimized
@@ -55,7 +55,7 @@ export default function Recap() {
             <ScrollReveal className="bento-card rounded-2xl overflow-hidden border-2 border-[#082016] relative group">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-                alt="Telepati 7.0 Pitching"
+                alt="Telepati 8.0 Pitching"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 unoptimized
