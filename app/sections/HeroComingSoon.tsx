@@ -10,6 +10,7 @@ return (
       <div className="hero-logo-reveal mb-10 w-[300px] h-[300px] md:w-[450px] md:h-[450px] flex items-center justify-center rounded-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          fetchPriority="high"
           src="/telepati8.svg"
           alt="Telepati 8.0 Logo"
           width={450}
@@ -25,7 +26,7 @@ return (
         </h1>
 
         <p className="font-(family-name:--font-inter) text-base md:text-[18px] leading-[1.6] text-[#3e4a3e] max-w-2xl mx-auto mb-10">
-          "Menanam inovasi, memanen keunggulan menuju Indonesia Emas"
+          "Menanam inovasi, memanen keunggulan menuju Indonesia Emas 2045"
         </p>
 
         <Link href="https://canva.link/proposal-sponsor-telepati-8-0" className="neo-button-primary w-full sm:w-auto">
