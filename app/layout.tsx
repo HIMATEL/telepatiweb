@@ -27,15 +27,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://polbantelepati.tech"),
   title: {
-    default:
-      "Telepati IoT Competition POLBAN — Telepati 8.0 | Agritech: Growing The Golden Future",
+    default: "Telepati IoT Competition POLBAN",
     template: "%s | Telepati IoT Competition POLBAN",
   },
   description:
     "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
   openGraph: {
-    title:
-      "Telepati IoT Competition POLBAN — Telepati 8.0 | Agritech: Growing The Golden Future",
+    title: "Telepati IoT Competition POLBAN",
     description:
       "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
     url: "https://polbantelepati.tech",

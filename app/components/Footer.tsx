@@ -17,7 +17,7 @@ export default function Footer() {
               height={32}
               className="h-16 w-auto object-contain bg-white rounded-full"
             />
-            Telepati IoT Competition POLBAN
+            TELEPATI 8.0
           </Link>
           <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-[#cde9d8] max-w-sm text-justify">
             Program kerja tahunan berupa perlombaan tingkat nasional yang
