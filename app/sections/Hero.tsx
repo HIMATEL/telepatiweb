@@ -26,12 +26,8 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-3">
+        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
           &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas&quot;
-        </p>
-
-        <p className="font-(family-name:--font-inter) text-[15px] md:text-[16px] leading-[1.6] text-on-surface-variant/90 max-w-2xl mx-auto mb-10 text-center">
-          Website ini merupakan portal resmi pendaftaran dan manajemen sistem untuk seluruh peserta <span className="font-semibold text-on-surface">Telepati IoT Competition POLBAN</span>.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
