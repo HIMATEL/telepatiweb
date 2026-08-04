@@ -1,12 +1,94 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import ScrollReveal from "../components/ScrollReveal";
 import Image from "next/image";
 
+interface GDriveFile {
+  id: string;
+  name: string;
+  thumbnailUrl: string;
+  downloadUrl: string;
+}
+
+interface RecapItem {
+  id: string;
+  title: string;
+  image: string;
+  alt: string;
+}
+
+const fallbackItems: RecapItem[] = [
+  {
+    id: "1",
+    title: "",
+    image: "",
+    alt: "",
+  },
+  {
+    id: "2",
+    title: "",
+    image: "",
+    alt: "",
+  },
+  {
+    id: "3",
+    title: "",
+    image: "",
+    alt: "",
+  },
+];
+
 export default function Recap() {
+  const [items, setItems] = useState<RecapItem[]>(fallbackItems);
+
+  useEffect(() => {
+    async function fetchGdriveFiles() {
+      try {
+        const folderId =
+          process.env.NEXT_PUBLIC_RECAP_GDRIVE_FOLDER_ID ||
+          process.env.RECAP_GDRIVE_FOLDER_ID ||
+          process.env.NEXT_PUBLIC_GDRIVE_FOLDER_ID;
+        const url = folderId
+          ? `/api/gdrive-grabber?folderId=${folderId}`
+          : "/api/gdrive-grabber";
+        const response = await fetch(url);
+        if (!response.ok)
+          throw new Error("Failed to fetch from gdrive-grabber");
+
+        const files: GDriveFile[] = await response.json();
+        if (files && files.length > 0) {
+          const mappedItems = files.map((file) => ({
+            id: file.id,
+            title: file.name.slice(0, -5).trimEnd(),
+            image: `https://lh3.googleusercontent.com/d/${file.id}`,
+            alt: file.name,
+          }));
+
+          // Make sure we have at least 3 items, fallback if less
+          const finalItems = [...mappedItems];
+          while (finalItems.length < 3) {
+            finalItems.push(fallbackItems[finalItems.length]);
+          }
+
+          setItems(finalItems);
+        }
+      } catch (err) {
+        console.error(
+          "Failed to load Google Drive files for Recap, using fallbacks:",
+          err,
+        );
+      }
+    }
+
+    fetchGdriveFiles();
+  }, []);
+
   return (
-    <section className="py-20 md:py-24 px-6 bg-[#006b30] text-white overflow-hidden relative">
+    <section className="py-20 md:py-24 px-6 bg-primary text-white overflow-hidden relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(109,221,136,0.2),transparent_50%)] pointer-events-none" />
 
-      <div className="max-w-[1152px] mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className="text-center mb-16">
           <h2 className="font-(family-name:--font-jakarta) text-[32px] md:text-[48px] font-extrabold mb-4">
             Jejak Langkah Telepati
@@ -17,57 +99,48 @@ export default function Recap() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Main big image */}
-          <ScrollReveal className="md:col-span-2 bento-card rounded-2xl overflow-hidden border-2 border-[#082016] h-[300px] md:h-[400px] relative group">
-            <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-              alt="Telepati 8.0 Recap"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              unoptimized
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#082016]/80 to-transparent" />
-            <div className="absolute bottom-6 left-6">
-              <h3 className="font-(family-name:--font-jakarta) text-2xl font-bold">
-                Grand Final Exhibition
-              </h3>
-            </div>
-          </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-100">
+          {items.slice(0, 3).map((item, index) => {
+            const isBig = index === 0;
+            return (
+              <ScrollReveal
+                key={item.id}
+                className={`bento-card rounded-2xl overflow-hidden border-2 border-on-surface relative group h-[240px] md:h-auto ${
+                  isBig
+                    ? "md:col-span-2 md:row-span-2"
+                    : "md:col-span-1 md:row-span-1"
+                }`}
+              >
+                {item.image.length === 0 ? (
+                  <p>Not Found</p>
+                ) : (
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    sizes="100%"
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
 
-          {/* Side images */}
-          <div className="grid grid-rows-2 gap-6 h-[300px] md:h-[400px]">
-            <ScrollReveal className="bento-card rounded-2xl overflow-hidden border-2 border-[#082016] relative group">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-                alt="Telepati 8.0 Winners"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#082016]/80 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <h3 className="font-(family-name:--font-jakarta) font-bold">
-                  Awarding Night
-                </h3>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal className="bento-card rounded-2xl overflow-hidden border-2 border-[#082016] relative group">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26Jp071Q51F14ZzP-u5j-B4F1y0a4rP-u3GkK3f_y2K7aX_4-y-r4Zz2G4F-F_a9t4Z2Y-c6G1k2N8y4A-m8B-k-P7h9K9K-A-R_x7R7x9P_F3N5y4A-m8B-k-P7h9K9K-A-R"
-                alt="Telepati 8.0 Pitching"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#082016]/80 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <h3 className="font-(family-name:--font-jakarta) font-bold">
-                  Live Pitching
-                </h3>
-              </div>
-            </ScrollReveal>
-          </div>
+                <div className="absolute inset-0 bg-linear-to-t from-on-surface/80 to-transparent" />
+                <div
+                  className={`absolute ${
+                    isBig ? "bottom-6 left-6" : "bottom-4 left-4"
+                  }`}
+                >
+                  <h3
+                    className={`font-(family-name:--font-jakarta) font-bold ${
+                      isBig ? "text-2xl" : "text-lg md:text-xl"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

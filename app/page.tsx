@@ -6,11 +6,12 @@ import Timeline from "./sections/Timeline";
 import Recap from "./sections/Recap";
 import Sponsors from "./sections/Sponsors";
 import HeroComingSoon from "./sections/HeroComingSoon";
+import Faq from "./sections/Faq";
 
 export const metadata: Metadata = {
-  title: "Telepati 8.0 — Coming Soon!",
+  title: "Telepati 8.0 — Agritech: Growing The Golden Future",
   description:
-    "Telepati (Telekomunikasi Paerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
+    "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
 };
 
 export default function Home() {
@@ -51,9 +52,9 @@ export default function Home() {
       <main className="font-(family-name:--font-jakarta)">
         <section id="home">
           {/* <Hero /> */}
-          <HeroComingSoon/>
+          <Hero />
         </section>
-        {/* <section id="tentang-wrapper">
+        <section id="tentang-wrapper">
           <About />
         </section>
         <section id="cabang-lomba-wrapper">
@@ -65,7 +66,10 @@ export default function Home() {
         <Recap />
         <section id="sponsor-wrapper">
           <Sponsors />
-        </section> */}
+        </section>
+        <section id="faqs">
+          <Faq />
+        </section>
       </main>
     </>
   );

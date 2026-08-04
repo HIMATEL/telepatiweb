@@ -16,7 +16,7 @@ const exo2 = Exo_2({
   variable: "--font-exo2",
   subsets: ["latin"],
   weight: ["400", "500", "700", "800"],
-})
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,15 +27,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://polbantelepati.tech"),
   title: {
-    default: "Telepati 8.0 — Inovasi Teknologi untuk Masa Depan Agrikultur",
+    default: "Telepati 8.0 — Agritech: Growing The Golden Future",
     template: "%s | Telepati 8.0",
   },
   description:
-    "Katalisator transformasi digital agrikultur Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
+    "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
   openGraph: {
-    title: "Telepati 8.0 — Inovasi Teknologi untuk Masa Depan Agrikultur",
+    title: "Telepati 8.0 — Agritech: Growing The Golden Future",
     description:
-      "Katalisator transformasi digital agrikultur Indonesia. Kompetisi IoT & AI berskala nasional oleh Himatel Polban.",
+      "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
     url: "https://polbantelepati.tech",
     siteName: "Telepati 8.0",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Telepati 8.0 - Smart Agriculture",
+        alt: "Telepati 8.0 - Agritech: Growing The Golden Future",
       },
     ],
     locale: "id_ID",
@@ -51,8 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Telepati 8.0 — Inovasi Teknologi",
-    description: "Kompetisi IoT & AI tingkat nasional untuk masa depan agrikultur.",
+    title: "Telepati 8.0 — Agritech: Growing The Golden Future",
+    description:
+      "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
     images: ["/og-image.jpg"],
   },
   icons: {
@@ -66,7 +67,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="id"
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <link
           rel="stylesheet"
@@ -81,15 +87,16 @@ export default function RootLayout({
             `,
           }}
         />
+        <meta name="theme-color" content="#F0FDF4"></meta>
       </head>
       <body
-        className={`${jakarta.variable} ${exo2.variable} ${inter.variable} antialiased`}
+        className={`${jakarta.variable} ${exo2.variable} ${inter.variable} antialiased bg-surface-variant`}
       >
         <IntroManager />
-        {/* <Header/> */}
+        <Header />
         {children}
-        <Analytics/>
-        {/* <Footer /> */}
+        <Analytics />
+        <Footer />
       </body>
     </html>
   );

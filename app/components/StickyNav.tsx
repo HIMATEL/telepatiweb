@@ -40,7 +40,7 @@ export default function StickyNav() {
   return (
     <div className="sticky top-36 col-span-1 md:col-span-3 hidden md:block">
       <div className="space-y-4 h-auto">
-        <h3 className="font-(family-name:--font-inter) text-[12px] font-bold text-[#3e4a3e] uppercase tracking-wider border-b-2 border-[#082016]/10 pb-2">
+        <h3 className="font-(family-name:--font-inter) text-[12px] font-bold text-on-surface-variant uppercase tracking-wider border-b-2 border-on-surface/10 pb-2">
           Navigasi Regulasi
         </h3>
         <ul className="space-y-3">
@@ -51,8 +51,8 @@ export default function StickyNav() {
                 <a
                   className={`font-(family-name:--font-inter) text-[16px] transition-colors flex items-center gap-2 ${
                     isActive
-                      ? "text-[#006b30] font-bold"
-                      : "text-[#3e4a3e] hover:text-[#006b30]"
+                      ? "text-primary font-bold"
+                      : "text-on-surface-variant hover:text-primary"
                   }`}
                   href={`#${item.id}`}
                 >

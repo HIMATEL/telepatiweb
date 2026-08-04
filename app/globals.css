@@ -132,15 +132,15 @@
    =========================== */
 @layer utilities {
   .neo-button-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-[#006b30] px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-[1] text-white shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_#061E14] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-primary px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-none text-white shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-px hover:-translate-y-px hover:shadow-[5px_5px_0px_#061E14] active:translate-x-0.75 active:translate-y-0.75 active:shadow-none;
   }
 
   .neo-button-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-[#fdc425] px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-[1] text-[#061E14] shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-[5px_5px_0px_#061E14] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#061E14] bg-secondary-container px-8 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold leading-none text-[#061E14] shadow-[3px_3px_0px_#061E14] transition-all duration-300 hover:-translate-x-px hover:-translate-y-px hover:shadow-[5px_5px_0px_#061E14] active:translate-x-0.75 active:translate-y-0.75 active:shadow-none;
   }
 
   .bento-card {
-    @apply bg-[#F0FDF4] border border-[#061E14]/10;
+    @apply bg-surface-variant border border-[#061E14]/10;
   }
 }
 
