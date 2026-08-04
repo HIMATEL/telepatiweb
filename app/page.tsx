@@ -9,7 +9,7 @@ import HeroComingSoon from "./sections/HeroComingSoon";
 import Faq from "./sections/Faq";
 
 export const metadata: Metadata = {
-  title: "Telepati IoT Competition POLBAN — Telepati 8.0 | Agritech: Growing The Golden Future",
+  title: "Telepati IoT Competition POLBAN",
   description:
     "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
 };
@@ -18,7 +18,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: "Telepati IoT Competition POLBAN — Telepati 8.0 | Agritech: Growing The Golden Future",
+    name: "Telepati IoT Competition POLBAN",
     description:
       "Telepati (Telekomunikasi Paerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
     startDate: "2026-08-01",

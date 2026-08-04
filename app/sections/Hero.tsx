@@ -32,9 +32,6 @@ export default function Hero() {
         <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-4">
           &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas&quot;
         </p>
-        <p className="font-(family-name:--font-inter) text-[14px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
-          Telepati IoT Competition POLBAN menggunakan Google Sign-In untuk memudahkan proses pendaftaran dan autentikasi peserta kompetisi secara aman.
-        </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
