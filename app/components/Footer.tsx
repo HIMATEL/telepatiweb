@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <Link
             href="#"
-            className="flex items-center gap-2 font-(family-name:--font-exo2) text-[24px] leading-[1.3] font-bold tracking-tight text-white mb-6"
+            className="flex items-center gap-2 font-(family-name:--font-exo2) text-[20px] leading-[1.3] font-bold tracking-tight text-white mb-6"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -17,7 +17,7 @@ export default function Footer() {
               height={32}
               className="h-16 w-auto object-contain bg-white rounded-full"
             />
-            TELEPATI 8.0
+            Telepati IoT Competition POLBAN
           </Link>
           <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-[#cde9d8] max-w-sm text-justify">
             Program kerja tahunan berupa perlombaan tingkat nasional yang
