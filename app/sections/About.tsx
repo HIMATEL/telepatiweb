@@ -10,7 +10,7 @@ export default function About() {
             Apa itu Telepati?
           </h2>
           <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-on-surface-variant mb-6 text-justify">
-            Telepati (Telekomunikasi Pamerin IoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi <span className="font-bold">Politeknik Negeri Bandung</span>.
+            Telepati (Telekomunikasi Pamerin IoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi <span className="font-bold">Politeknik Negeri Bandung</span>. Dikenal juga sebagai <span className="font-bold">Telepati IoT Competition POLBAN</span>, ajang ini menjadi wadah bagi mahasiswa seluruh Indonesia untuk berinovasi di bidang teknologi.
           </p>
         </div>
 

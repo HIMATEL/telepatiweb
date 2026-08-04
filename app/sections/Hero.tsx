@@ -19,6 +19,9 @@ export default function Hero() {
       </div>
 
       <div className="text-center max-w-4xl mx-auto hero-text-reveal">
+        <span className="inline-block bg-secondary-container text-on-surface border-2 border-on-surface px-4 py-1 rounded-full text-[12px] leading-none tracking-wider font-bold uppercase shadow-[2px_2px_0px_#082016] mb-6">
+          Telepati IoT Competition POLBAN
+        </span>
         <h1 className="font-(family-name:--font-jakarta) text-[40px] leading-[1.2] md:text-[64px] md:leading-[1.1] font-extrabold tracking-tight text-on-surface mb-6">
           Agritech: <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-linear-to-tr from-[#4caf13] to-[#fdc425]">
@@ -26,8 +29,11 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
-          "Menanam inovasi, memanen keunggulan menuju Indonesia Emas"
+        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-4">
+          &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas&quot;
+        </p>
+        <p className="font-(family-name:--font-inter) text-[14px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
+          Telepati IoT Competition POLBAN menggunakan Google Sign-In untuk memudahkan proses pendaftaran dan autentikasi peserta kompetisi secara aman.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
