@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../../../app/components/ScrollReveal";
 import StickyNav from "../../../app/components/StickyNav";
 import { agriDataEvents } from "@/app/utils/timelines";
+
+export const metadata: Metadata = {
+  title: "Regulasi AI AgriData Intelligence Race",
+  description:
+    "Regulasi dan panduan lengkap lomba AI AgriData Intelligence Race pada Telepati 8.0 — kompetisi berbasis kecerdasan buatan (Computer Vision & Object Detection) yang menguji analisis ilmiah dan problem-solving peserta terhadap studi kasus nyata di industri agrikultur.",
+  openGraph: {
+    title: "Regulasi AI AgriData Intelligence Race | Telepati IoT Competition POLBAN",
+    description:
+      "Panduan lengkap lomba AI AgriData Intelligence Race pada Telepati 8.0 — kompetisi berbasis kecerdasan buatan yang menguji analisis ilmiah dan problem-solving di industri agrikultur.",
+    url: "https://polbantelepati.tech/regulasi/ai",
+    type: "article",
+  },
+};
 
 export default function RegulasiAIPage() {
   return (

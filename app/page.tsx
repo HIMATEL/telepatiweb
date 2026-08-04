@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Telepati IoT Competition POLBAN",
   description:
     "Telepati (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function Home() {

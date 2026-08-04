@@ -1,7 +1,22 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
 import StickyNav from "../../components/StickyNav";
 import { agroIoT } from "@/app/utils/timelines";
+
+export const metadata: Metadata = {
+  title: "Regulasi IoT AgroBot Smart Farming",
+  description:
+    "Regulasi dan panduan lengkap lomba IoT AgroBot Smart Farming pada Telepati 8.0 — kompetisi perancangan dan pengembangan sistem IoT berbasis robotika untuk otomatisasi pertanian cerdas di Indonesia.",
+  openGraph: {
+    title: "Regulasi IoT AgroBot Smart Farming | Telepati IoT Competition POLBAN",
+    description:
+      "Panduan lengkap lomba IoT AgroBot Smart Farming pada Telepati 8.0 — kompetisi perancangan sistem IoT berbasis robotika untuk otomatisasi pertanian cerdas.",
+    url: "https://polbantelepati.tech/regulasi/iot",
+    type: "article",
+  },
+};
+
 
 export default function RegulasiIoTPage() {
   return (
