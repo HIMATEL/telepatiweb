@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-on-surface text-[#e8fff0] py-16 px-6 border-t-8 border-primary">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
         <div className="md:col-span-2">
           <Link
             href="#"
@@ -69,6 +69,30 @@ export default function Footer() {
             <li>
               <Link href="/faq" className="hover:text-white transition-colors">
                 FAQ
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-(family-name:--font-jakarta) font-bold text-lg mb-4 text-white">
+            Legal
+          </h4>
+          <ul className="space-y-3 font-(family-name:--font-inter) text-[#cde9d8]">
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white transition-colors"
+              >
+                Kebijakan Privasi
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms-of-service"
+                className="hover:text-white transition-colors"
+              >
+                Syarat dan Ketentuan
               </Link>
             </li>
           </ul>
