@@ -27,7 +27,8 @@ export default function Hero() {
         </h1>
 
         <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
-          &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas&quot;
+          &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas
+          2045&quot;
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

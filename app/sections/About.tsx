@@ -2,7 +2,10 @@ import ScrollReveal from "../components/ScrollReveal";
 
 export default function About() {
   return (
-    <ScrollReveal id="tentang" className="py-20 md:py-24 px-6 max-w-6xl mx-auto">
+    <ScrollReveal
+      id="tentang"
+      className="py-20 md:py-24 px-6 max-w-6xl mx-auto"
+    >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* Left column */}
         <div className="md:col-span-5 flex flex-col justify-center">
@@ -10,7 +13,15 @@ export default function About() {
             Apa itu Telepati?
           </h2>
           <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-on-surface-variant mb-6 text-justify">
-            Telepati (Telekomunikasi Pamerin IoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi <span className="font-bold">Politeknik Negeri Bandung</span>. Melalui portal pendaftaran dan manajemen sistem <span className="font-bold">Telepati IoT Competition POLBAN</span> ini, peserta dapat mendaftar, mengelola akun, serta mengakses seluruh informasi perlombaan secara terintegrasi.
+            Telepati (Telekomunikasi Pamerin IoT) merupakan kompetisi IoT
+            tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa
+            Teknik Telekomunikasi Politeknik Negeri Bandung. Kali ini hadir
+            dengan Tema{" "}
+            <span className="font-bold text-secondary">
+              Agritech: Growing the Golden Future
+            </span>{" "}
+            yang berfokus pada agriteknologi guna mendukung industri agrikultur
+            di Indonesia.
           </p>
         </div>
 
@@ -24,7 +35,9 @@ export default function About() {
               7 Tahun Berjalan
             </h3>
             <p className="text-sm text-on-surface-variant text-justify">
-              Telepati telah diselenggarakan selama 7 tahun berturut-turut, menjadikannya salah satu kompetisi teknologi yang berpengalaman di Indonesia.
+              Telepati telah diselenggarakan selama 7 tahun berturut-turut,
+              menjadikannya salah satu kompetisi teknologi yang berpengalaman di
+              Indonesia.
             </p>
           </div>
 
