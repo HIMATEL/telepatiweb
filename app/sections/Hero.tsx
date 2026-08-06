@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="text-center max-w-4xl mx-auto hero-text-reveal">
         <h1 className="font-(family-name:--font-jakarta) text-[40px] leading-[1.2] md:text-[64px] md:leading-[1.1] font-extrabold tracking-tight text-on-surface mb-6">
           Agritech: <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-linear-to-tr from-[#4caf13] to-[#fdc425]">
+          <span className="text-transparent bg-clip-text bg-linear-to-tr from-primary to-secondary-container">
             Growing The Golden Future
           </span>
         </h1>
