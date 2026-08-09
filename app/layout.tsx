@@ -88,7 +88,16 @@ export default function RootLayout({
             `,
           }}
         />
-        <meta name="theme-color" content="#F0FDF4"></meta>
+        <meta
+          name="theme-color"
+          content="#F0FDF4"
+          media="(prefers-color-scheme: dark)"
+        ></meta>
+        <meta
+          name="theme-color"
+          content="#F0FDF4"
+          media="(prefers-color-scheme: light)"
+        ></meta>
       </head>
       <body
         className={`${jakarta.variable} ${exo2.variable} ${inter.variable} antialiased bg-surface-variant`}

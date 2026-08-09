@@ -29,9 +29,14 @@ export default function Footer() {
             agrikultur Indonesia yang lebih maju.
           </p>
           <p className="font-(family-name:--font-inter) text-[14px] leading-[1.6] text-[#cde9d8]/80 max-w-sm text-justify mt-3">
-            Website ini merupakan portal resmi pendaftaran dan manajemen sistem untuk seluruh peserta <span className="font-semibold text-white">Telepati IoT Competition POLBAN</span>.
+            Website ini merupakan portal resmi pendaftaran dan manajemen sistem
+            untuk seluruh peserta{" "}
+            <span className="font-semibold text-white">
+              Telepati IoT Competition POLBAN
+            </span>
+            .
           </p>
-          <div className="mt-4 rounded-full">
+          <div className="mt-4 rounded-full px-2 pv-1">
             <img
               src="/images/supporters.png"
               className="scale-[50%] origin-left bg-white p-2 rounded-full"
