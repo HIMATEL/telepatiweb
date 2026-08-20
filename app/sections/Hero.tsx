@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Countdown from "../components/Countdown";
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#006b301a_1px,transparent_1px),linear-gradient(to_bottom,#006b301a_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
       {/* Logo */}
-      <div className="mb-10 w-75 h-75 md:w-112.5d:h-[450px] flex items-center justify-center rounded-full overflow-hidden hero-logo-reveal">
+      <div className="mb-10 w-75 h-75 md:w-112.5 md:h-[450px] flex items-center justify-center rounded-full overflow-hidden hero-logo-reveal">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/telepati8.svg"
@@ -26,10 +27,15 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-10">
+        <p className="font-(family-name:--font-inter) text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mx-auto mb-8">
           &quot;Menanam inovasi, memanen keunggulan menuju Indonesia Emas
           2045&quot;
         </p>
+
+        {/* Countdown */}
+        <div className="mb-10">
+          <Countdown />
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
