@@ -5,7 +5,7 @@ const agroIoT = [
     desc: "Pendaftaran akun/tim awal untuk mengamankan kuota peserta kompetisi IoT AgroIoT.",
   },
   {
-    date: "24 – 30 Agustus 2026",
+    date: "24 Agustus – 13 September 2026",
     title: "Extended Registration (Batch 2)",
     desc: "Pendaftaran tahap lanjutan bagi peserta yang belum melakukan registrasi awal.",
   },

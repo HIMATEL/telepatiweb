@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // ponytail: timezone hardcoded WIB. upgrade: use Intl.DateTimeFormat or a date lib when DST matters
-const DEADLINE = new Date("2026-08-30T23:59:00+07:00");
+const DEADLINE = new Date("2026-09-13T23:59:00+07:00");
 
 function calcTimeLeft() {
   const diff = DEADLINE.getTime() - Date.now();

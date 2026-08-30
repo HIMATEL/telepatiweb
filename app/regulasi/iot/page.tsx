@@ -179,7 +179,7 @@ export default function RegulasiIoTPage() {
                         </td>
                         <td className="py-3 px-4 text-on-surface-variant">
                           <strong>Regular:</strong> 3 - 23 Agustus 2026 |{" "}
-                          <strong>Extended:</strong> 24 - 30 Agustus 2026
+                          <strong>Extended:</strong> 24 Agustus - 13 September 2026
                         </td>
                       </tr>
                       <tr>
