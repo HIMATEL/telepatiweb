@@ -38,7 +38,7 @@ export default function RegulasiAIPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://canva.link/guidebook-telepati-8-agridata"
+                href="https://canva.link/wzad4tcn1xbzgrv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer neo-button-primary px-8 py-4 flex items-center gap-2"
