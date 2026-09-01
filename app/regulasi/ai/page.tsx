@@ -395,6 +395,14 @@ export default function RegulasiAIPage() {
                     seed (<code>random_state</code>) pada setiap kode pemrosesan
                     dan pelatihan agar hasil juri 100% konsisten.
                   </li>
+                  <li>
+                    <strong>Mapping Kelas Canonical (11 Kelas):</strong> Dataset
+                    resmi terdiri dari 21 kategori di file COCO bawaan (termasuk
+                    variasi nama & kapitalisasi). Untuk mencegah bias evaluasi,
+                    peserta <strong>wajib melakukan re-labeling/mapping</strong>{" "}
+                    menjadi 11 kelas canonical resmi di alur preprocessing.
+                    Evaluasi juri (Audit Run) juga akan menggunakan 11 kelas ini.
+                  </li>
                   <li className="text-red-700 font-semibold bg-red-50 p-2.5 rounded border border-red-200">
                     🚫 Dilarang menggunakan pretrained model eksternal di luar
                     dataset resmi. LLM/Assistant (ChatGPT, Claude, Copilot)
@@ -510,6 +518,118 @@ export default function RegulasiAIPage() {
                   </tbody>
                 </table>
               </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Mapping Kelas Canonical */}
+          <ScrollReveal
+            id="mapping"
+            className="bento-card rounded-xl p-8 md:p-12 border-2 border-on-surface bg-[#e8fff0]"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-secondary-container rounded-lg border-2 border-on-surface flex items-center justify-center shadow-[3px_3px_0px_#082016]">
+                <span className="text-2xl">🏷️</span>
+              </div>
+              <div>
+                <span className="text-xs uppercase tracking-wider font-bold text-primary">
+                  Referensi Evaluasi
+                </span>
+                <h2 className="font-(family-name:--font-jakarta) text-[32px] font-bold text-on-surface">
+                  Canonical Class Mapping (11 Kelas)
+                </h2>
+              </div>
+            </div>
+
+            <div className="bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016] space-y-4 font-(family-name:--font-inter) text-[15px] text-on-surface-variant leading-relaxed">
+              <p>
+                Dataset resmi terdiri dari beberapa sumber yang digabung. Beberapa
+                kategori memiliki nama yang berbeda format (huruf besar/kecil,
+                spasi, tanda hubung) namun merujuk ke penyakit yang sama. Untuk
+                menjaga konsistensi evaluasi, berikut daftar <strong>11 kelas
+                canonical</strong> yang menjadi acuan resmi penilaian:
+              </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse font-(family-name:--font-inter) text-sm text-left border border-on-surface">
+                  <thead>
+                    <tr className="bg-on-surface text-white">
+                      <th className="py-2.5 px-4 border border-on-surface w-12 text-center">
+                        No
+                      </th>
+                      <th className="py-2.5 px-4 border border-on-surface">
+                        Kelas Canonical (11)
+                      </th>
+                      <th className="py-2.5 px-4 border border-on-surface">
+                        Nama di File COCO Bawaan (21 Raw)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-on-surface-variant">
+                    <tr className="border-b border-on-surface/20 bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">1</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Bacterial leaf blight</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Bacterial leaf blight</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-[#e8fff0]/30">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">2</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Bacterial panicle blight</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Bacterial panicle Blight</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">3</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Blast</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Blast, Leaf blast, Infected Blast</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-[#e8fff0]/30">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">4</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Brown spot</td>
+                      <td className="py-3 px-4 border border-on-surface/20">BrownSpot, Brown spot</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">5</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">False smut</td>
+                      <td className="py-3 px-4 border border-on-surface/20">False-Smut</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-[#e8fff0]/30">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">6</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Healthy</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Healthy Rice Leaf, Healthy Rice beads, Healthy, healthy</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">7</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Leaf roller</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Leaf-roller</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-[#e8fff0]/30">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">8</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Leaf scald</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Leaf Scald, Leaf scald</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">9</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Narrow brown</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Narrow brown</td>
+                    </tr>
+                    <tr className="border-b border-on-surface/20 bg-[#e8fff0]/30">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">10</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Sheath blight</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Sheath Blight</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-center">11</td>
+                      <td className="py-3 px-4 border border-on-surface/20 font-bold text-on-surface">Tungro</td>
+                      <td className="py-3 px-4 border border-on-surface/20">Rice-Tungro</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="text-sm text-on-surface-variant/80 italic">
+                Catatan: Beberapa kategori di file COCO bawaan
+                (Leaf-blight, Rice-Leaf-Diseasee, paddy) merupakan label
+                supercategory (tanpa bounding box) dan tidak termasuk dalam 11
+                kelas canonical.
+              </p>
             </div>
           </ScrollReveal>
 
