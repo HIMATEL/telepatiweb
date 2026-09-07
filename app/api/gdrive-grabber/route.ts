@@ -3,14 +3,21 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
+    const type = searchParams.get("type");
     
-    // Get folder ID from query param, fallback to environment variable
-    const folderId =
-      searchParams.get("folderId") ||
-      process.env.RECAP_GDRIVE_FOLDER_ID ||
-      process.env.GDRIVE_FOLDER_ID ||
-      process.env.NEXT_PUBLIC_GDRIVE_FOLDER_ID ||
-      "";
+    // Get folder ID from query param, fallback to environment variable (Server-side)
+    let folderId = searchParams.get("folderId");
+    
+    if (!folderId) {
+      if (type === "medpart") {
+        folderId = process.env.MEDPART_GDRIVE_FOLDER_ID || "";
+      } else {
+        folderId =
+          process.env.RECAP_GDRIVE_FOLDER_ID ||
+          process.env.GDRIVE_FOLDER_ID ||
+          "";
+      }
+    }
 
     if (!folderId || folderId === "YOUR FOLDER ID") {
       return NextResponse.json(
