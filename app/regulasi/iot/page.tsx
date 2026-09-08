@@ -38,9 +38,6 @@ export default function RegulasiIoTPage() {
               (hardware, sensor, dan otomatisasi cerdas) bagi sektor pertanian
               Indonesia.
             </p>
-            <div className="bg-primary/10 border-2 border-primary rounded-xl p-4 text-on-surface font-(family-name:--font-inter) text-[14px] leading-relaxed shadow-[3px_3px_0px_#082016]">
-              💡 <strong>Disclaimer Pendanaan:</strong> Seluruh dana pengembangan prototype/proyek bersumber dari mandiri dan <strong>tidak dibatasi</strong> (peserta bebas menentukan alokasi anggaran sesuai kebutuhan inovasi).
-            </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="https://canva.link/x93wn0v5uwp1qm0"
@@ -511,11 +508,16 @@ export default function RegulasiIoTPage() {
               </li>
               <li className="flex items-start gap-3 bg-white p-4 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_#082016]">
                 <span className="text-primary mt-1 text-xl">💰</span>
-                <span>
-                  Seluruh komponen harus dimasukkan ke RAB. Komponen milik
-                  pribadi (tidak dibeli) tetap wajib mencantumkan harga pasaran
-                  saat ini.
-                </span>
+                <div>
+                  <p>
+                    Seluruh komponen harus dimasukkan ke RAB. Komponen milik
+                    pribadi (tidak dibeli) tetap wajib mencantumkan harga pasaran
+                    saat ini.
+                  </p>
+                  <div className="mt-3 bg-primary/10 border border-primary rounded-lg p-3 text-on-surface font-(family-name:--font-inter) text-[14px] leading-relaxed">
+                    💡 <strong>Disclaimer Pendanaan:</strong> Seluruh dana pengembangan prototipe/proyek bersumber dari mandiri (peserta disarankan mengajukan permohonan pendanaan lomba ke pihak kampus/perguruan tinggi masing-masing) dan <strong>besaran anggaran tidak dibatasi</strong> (peserta bebas menentukan alokasi anggaran sesuai kebutuhan inovasi).
+                  </div>
+                </div>
               </li>
               <li className="flex items-start gap-3 bg-white p-4 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_#082016]">
                 <span className="text-primary mt-1 text-xl">🔧</span>
