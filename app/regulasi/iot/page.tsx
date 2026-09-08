@@ -38,6 +38,9 @@ export default function RegulasiIoTPage() {
               (hardware, sensor, dan otomatisasi cerdas) bagi sektor pertanian
               Indonesia.
             </p>
+            <div className="bg-primary/10 border-2 border-primary rounded-xl p-4 text-on-surface font-(family-name:--font-inter) text-[14px] leading-relaxed shadow-[3px_3px_0px_#082016]">
+              💡 <strong>Disclaimer Pendanaan:</strong> Seluruh dana pengembangan prototype/proyek bersumber dari mandiri dan <strong>tidak dibatasi</strong> (peserta bebas menentukan alokasi anggaran sesuai kebutuhan inovasi).
+            </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="https://canva.link/x93wn0v5uwp1qm0"
