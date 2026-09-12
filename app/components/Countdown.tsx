@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-// ponytail: timezone hardcoded WIB. upgrade: use Intl.DateTimeFormat or a date lib when DST matters
-const DEADLINE = new Date("2026-09-13T23:59:00+07:00");
+import { REGISTRATION_DEADLINE } from "../utils/deadline";
 
 function calcTimeLeft() {
-  const diff = DEADLINE.getTime() - Date.now();
+  const diff = REGISTRATION_DEADLINE.getTime() - Date.now();
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
   return {
     days: Math.floor(diff / 86_400_000),

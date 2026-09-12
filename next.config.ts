@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: [
+    "localhost",
+    "127.0.0.1",
+    "192.168.4.250",
+    "100.122.193.74",
+    "rmaserver",
+    "*.ts.net",
+  ],
   images: {
     remotePatterns: [
       {

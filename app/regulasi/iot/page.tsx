@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
 import StickyNav from "../../components/StickyNav";
+import RegistrationDisclaimer from "../../components/RegistrationDisclaimer";
 import { agroIoT } from "@/app/utils/timelines";
 
 export const metadata: Metadata = {
@@ -73,6 +74,9 @@ export default function RegulasiIoTPage() {
           </div>
         </div>
       </header>
+
+      {/* Registration & Submission Disclaimer */}
+      <RegistrationDisclaimer />
 
       {/* Main Content Grid */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -179,7 +183,7 @@ export default function RegulasiIoTPage() {
                         </td>
                         <td className="py-3 px-4 text-on-surface-variant">
                           <strong>Regular:</strong> 3 - 23 Agustus 2026 |{" "}
-                          <strong>Extended:</strong> 24 Agustus - 13 September 2026
+                          <strong>Extended:</strong> 24 Agustus - 20 September 2026
                         </td>
                       </tr>
                       <tr>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { REGISTRATION_DEADLINE } from "../utils/deadline";
 
 const NavItem = ({
   item,
@@ -58,8 +59,10 @@ const NavList = ({
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
 
   useEffect(() => {
+    setIsClosed(Date.now() > REGISTRATION_DEADLINE.getTime());
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -102,14 +105,16 @@ export default function Header() {
             <NavList items={navItems} />
           </nav>
 
-          <div className="hidden lg:block">
-            <Link
-              href="https://dashboard.polbantelepati.tech"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-on-surface bg-primary px-6 py-2.5 font-(family-name:--font-jakarta) text-[14px] font-bold text-white shadow-[2px_2px_0px_#082016] transition-all duration-300 hover:-translate-x-px hover:-translate-y-px hover:shadow-[4px_4px_0px_#082016] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
-            >
-              Dashboard Peserta
-            </Link>
-          </div>
+          {!isClosed && (
+            <div className="hidden lg:block">
+              <Link
+                href="https://dashboard.polbantelepati.tech"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-on-surface bg-primary px-6 py-2.5 font-(family-name:--font-jakarta) text-[14px] font-bold text-white shadow-[2px_2px_0px_#082016] transition-all duration-300 hover:-translate-x-px hover:-translate-y-px hover:shadow-[4px_4px_0px_#082016] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+              >
+                Dashboard Peserta
+              </Link>
+            </div>
+          )}
 
           <button
             className="lg:hidden relative p-2 text-on-surface"
@@ -144,15 +149,17 @@ export default function Header() {
             onItemClick={() => setMobileMenuOpen(false)}
           />
         </nav>
-        <div className="mt-8">
-          <Link
-            href="https://dashboard.polbantelepati.tech"
-            onClick={() => setMobileMenuOpen(false)}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-on-surface bg-primary px-6 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold text-white shadow-[3px_3px_0px_#082016] transition-all hover:shadow-[5px_5px_0px_#082016]"
-          >
-            Daftar Sekarang
-          </Link>
-        </div>
+        {!isClosed && (
+          <div className="mt-8">
+            <Link
+              href="https://dashboard.polbantelepati.tech"
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-on-surface bg-primary px-6 py-4 font-(family-name:--font-jakarta) text-[16px] font-bold text-white shadow-[3px_3px_0px_#082016] transition-all hover:shadow-[5px_5px_0px_#082016]"
+            >
+              Daftar Sekarang
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );

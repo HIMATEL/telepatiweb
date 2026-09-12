@@ -1,7 +1,17 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Countdown from "../components/Countdown";
+import { REGISTRATION_DEADLINE } from "../utils/deadline";
 
 export default function Hero() {
+  const [isClosed, setIsClosed] = useState(false);
+
+  useEffect(() => {
+    setIsClosed(Date.now() > REGISTRATION_DEADLINE.getTime());
+  }, []);
+
   return (
     <div className="relative pt-32 pb-20 md:pt-40 md:pb-24 px-6 overflow-hidden max-w-6xl mx-auto min-h-[90vh] flex flex-col items-center justify-center">
       {/* Decorative background grid */}
@@ -44,12 +54,14 @@ export default function Hero() {
           >
             Lihat kategori lomba
           </Link>
-          <Link
-            href="https://dashboard.polbantelepati.tech"
-            className="neo-button-secondary w-full sm:w-auto"
-          >
-            Registrasi Sekarang
-          </Link>
+          {!isClosed && (
+            <Link
+              href="https://dashboard.polbantelepati.tech"
+              className="neo-button-secondary w-full sm:w-auto"
+            >
+              Registrasi Sekarang
+            </Link>
+          )}
         </div>
       </div>
     </div>

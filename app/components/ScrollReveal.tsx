@@ -13,25 +13,34 @@ export default function ScrollReveal({ children, className = "", id }: ScrollRev
 
   useEffect(() => {
     const node = ref.current;
+    if (!node) return;
+
+    // Immediate check if element is already in viewport
+    const rect = node.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      node.classList.add("visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px 50px 0px",
       }
     );
 
-    if (node) {
-      observer.observe(node);
-    }
+    observer.observe(node);
 
     return () => {
-      if (node) observer.unobserve(node);
+      observer.unobserve(node);
     };
   }, []);
 

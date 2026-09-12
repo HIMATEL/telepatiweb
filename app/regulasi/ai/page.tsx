@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../../../app/components/ScrollReveal";
 import StickyNav from "../../../app/components/StickyNav";
+import RegistrationDisclaimer from "../../../app/components/RegistrationDisclaimer";
 import { agriDataEvents } from "@/app/utils/timelines";
 
 export const metadata: Metadata = {
@@ -71,6 +72,9 @@ export default function RegulasiAIPage() {
           </div>
         </div>
       </header>
+
+      {/* Registration & Submission Disclaimer */}
+      <RegistrationDisclaimer />
 
       {/* Main Content Grid */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">

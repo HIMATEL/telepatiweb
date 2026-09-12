@@ -5,17 +5,17 @@ const agroIoT = [
     desc: "Pendaftaran akun/tim awal untuk mengamankan kuota peserta kompetisi IoT AgroIoT.",
   },
   {
-    date: "24 Agustus – 13 September 2026",
+    date: "24 Agustus – 20 September 2026",
     title: "Extended Registration (Batch 2)",
     desc: "Pendaftaran tahap lanjutan bagi peserta yang belum melakukan registrasi awal.",
   },
   {
-    date: "24 Agustus – 13 September 2026",
+    date: "24 Agustus – 20 September 2026",
     title: "Pengumpulan Proposal",
     desc: "Batas pengunggahan berkas proposal karya inovasi IoT via website resmi TELEPATI.",
   },
   {
-    date: "14 – 25 September 2026",
+    date: "20 September – 4 Oktober 2026",
     title: "Penilaian & Penyaringan 10 Besar",
     desc: "Proses seleksi dan kurasi proposal oleh dewan juri untuk menentukan 10 finalis terbaik.",
   },

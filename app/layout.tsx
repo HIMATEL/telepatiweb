@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, Exo_2 } from "next/font/google";
 import "./globals.css";
 import IntroManager from "./components/IntroManager";
+import ExtendedRegistrationModal from "./components/ExtendedRegistrationModal";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Analytics } from "@vercel/analytics/next";
@@ -103,6 +104,7 @@ export default function RootLayout({
         className={`${jakarta.variable} ${exo2.variable} ${inter.variable} antialiased bg-surface-variant`}
       >
         <IntroManager />
+        <ExtendedRegistrationModal />
         <Header />
         {children}
         <Analytics />
