@@ -49,6 +49,14 @@ export default function Timeline() {
         </button>
       </div>
 
+      {/* Status penutupan pendaftaran AgroIoT */}
+      {activeTab === "agriTech" && (
+        <p className="-mt-6 mb-12 mx-auto max-w-2xl text-center rounded-xl border-2 border-on-surface bg-[#fff9db] px-4 py-3 font-(family-name:--font-inter) text-[14px] font-semibold text-on-surface shadow-[3px_3px_0px_#082016]">
+          Pendaftaran &amp; pengumpulan proposal AgroIoT telah{" "}
+          <strong>ditutup</strong> pada 20 September 2026 pukul 23:59 WIB.
+        </p>
+      )}
+
       {/* Horizontal Timeline Container (Desktop) */}
       <div className="relative w-full mx-auto py-20 hidden md:block overflow-x-auto scrollbar-hide">
         <style>

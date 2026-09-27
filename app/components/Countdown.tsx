@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { REGISTRATION_DEADLINE } from "../utils/deadline";
+import { AGRIDATA_DEADLINE } from "../utils/deadline";
 
+// ponytail: countdown hero khusus penutupan registrasi AgriData
 function calcTimeLeft() {
-  const diff = REGISTRATION_DEADLINE.getTime() - Date.now();
+  const diff = AGRIDATA_DEADLINE.getTime() - Date.now();
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
   return {
     days: Math.floor(diff / 86_400_000),
@@ -43,7 +44,7 @@ export default function Countdown() {
     return (
       <div className="flex flex-col items-center gap-3" suppressHydrationWarning>
         <p className="text-sm uppercase tracking-widest text-on-surface-variant">
-          Pendaftaran ditutup dalam
+          Registrasi AgriData ditutup dalam
         </p>
         <div className="flex items-center gap-4 md:gap-6">
           <Unit value={0} label="hari" />
@@ -61,7 +62,7 @@ export default function Countdown() {
   if (time.expired) {
     return (
       <p className="text-lg md:text-xl font-semibold text-primary text-center">
-        Pendaftaran telah ditutup!
+        Registrasi AgriData telah ditutup!
       </p>
     );
   }
@@ -69,7 +70,7 @@ export default function Countdown() {
   return (
     <div className="flex flex-col items-center gap-3">
       <p className="text-sm uppercase tracking-widest text-on-surface-variant">
-        Pendaftaran ditutup dalam
+        Registrasi AgriData ditutup dalam
       </p>
       <div className="flex items-center gap-4 md:gap-6">
         <Unit value={time.days} label="hari" />

@@ -74,7 +74,7 @@ export default function RegulasiAIPage() {
       </header>
 
       {/* Registration & Submission Disclaimer */}
-      <RegistrationDisclaimer />
+      <RegistrationDisclaimer track="agriData" />
 
       {/* Main Content Grid */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
