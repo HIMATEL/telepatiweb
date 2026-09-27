@@ -8,12 +8,12 @@ export default function ExtendedRegistrationModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Active date range: Now until 20 September 2026 23:59:59 WIB
-    const endDate = new Date("2026-09-20T23:59:59+07:00");
+    // Active date range: Now until 07 November 2026 23:59:59 WIB (hari-H acara)
+    const endDate = new Date("2026-11-07T23:59:59+07:00");
     const now = new Date();
 
     const isWithinDateRange = now <= endDate;
-    const isDismissed = sessionStorage.getItem("telepati_ext_reg_closed");
+    const isDismissed = sessionStorage.getItem("telepati_date_change_closed");
 
     // ponytail: simple date-gate + sessionStorage flag, upgrade to remote config if dates dynamic
     if (isWithinDateRange && !isDismissed) {
@@ -26,7 +26,7 @@ export default function ExtendedRegistrationModal() {
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("telepati_ext_reg_closed", "true");
+    sessionStorage.setItem("telepati_date_change_closed", "true");
   };
 
   if (!isOpen) return null;
@@ -35,7 +35,7 @@ export default function ExtendedRegistrationModal() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Extended Registration AgroIoT"
+      aria-label="Perubahan Tanggal Acara TELEPATI 8.0"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md transition-all duration-300 animate-in fade-in"
       onClick={handleClose}
     >
@@ -64,10 +64,10 @@ export default function ExtendedRegistrationModal() {
         {/* Pure Image with Outline & Shadow */}
         <div className="relative w-full rounded-2xl overflow-hidden border-2 border-on-surface shadow-[6px_6px_0px_#082016] bg-black">
           <Image
-            src="/images/extended-registration-iot.png"
-            alt="Extended Registration TELEPATI 8.0 AgroIoT Innovation Challenge"
-            width={600}
-            height={850}
+            src="/images/perubahan-tanggal-telepati8.jpg"
+            alt="Perubahan Tanggal Acara TELEPATI 8.0 - Tanggal Baru 07 November 2026, Last Registration 25 Oktober 2026"
+            width={1080}
+            height={1350}
             priority
             className="w-full h-auto object-contain max-h-[72vh]"
           />

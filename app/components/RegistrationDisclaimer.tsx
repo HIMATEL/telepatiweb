@@ -24,11 +24,11 @@ export default function RegistrationDisclaimer() {
         <p className="font-(family-name:--font-inter) text-[14px] md:text-[15px] text-on-surface-variant leading-relaxed">
           {isClosed ? (
             <>
-              Pendaftaran akun dan kompetisi telah resmi <strong>ditutup</strong> pada <strong>20 September 2026 pukul 23:59 WIB</strong>. Terima kasih atas partisipasi seluruh peserta.
+              Pendaftaran akun dan kompetisi telah resmi <strong>ditutup</strong> pada <strong>25 Oktober 2026 pukul 23:59 WIB</strong>. Terima kasih atas partisipasi seluruh peserta.
             </>
           ) : (
             <>
-              Pendaftaran peserta baru dan pengumpulan berkas karya / proposal (submission) diperpanjang hingga <strong>20 September 2026 pukul 23:59 WIB</strong> melalui{" "}
+              Pendaftaran peserta baru dan pengumpulan berkas karya / proposal (submission) diperpanjang hingga <strong>25 Oktober 2026 pukul 23:59 WIB</strong> melalui{" "}
               <a
                 href="https://dashboard.polbantelepati.tech"
                 target="_blank"

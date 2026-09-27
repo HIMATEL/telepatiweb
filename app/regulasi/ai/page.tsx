@@ -241,7 +241,7 @@ export default function RegulasiAIPage() {
                           Periode Pendaftaran
                         </td>
                         <td className="py-3 px-4 text-on-surface-variant">
-                          1 Agustus – 26 September 2026 (Tutup pukul 23:59 WIB
+                          1 Agustus – 25 Oktober 2026 (Tutup pukul 23:59 WIB
                           via Website Resmi TELEPATI)
                         </td>
                       </tr>

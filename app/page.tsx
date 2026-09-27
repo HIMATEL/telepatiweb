@@ -25,7 +25,7 @@ export default function Home() {
     description:
       "TELEPATI (Telekomunikasi Pamerin AIoT) merupakan kompetisi tahunan tingkat nasional yang diadakan oleh Himpunan Mahasiswa Teknik Telekomunikasi Politeknik Negeri Bandung. Tahun ini, Telepati 8.0 hadir dengan tema Growing The Golden Future yang berfokus pada agriteknologi guna mendukung industri agrikultur di Indonesia. Bergabunglah dalam pergerakan nyata untuk menciptakan solusi cerdas, efisien, dan berkelanjutan melalui kompetisi teknologi berskala nasional.",
     startDate: "2026-08-01",
-    endDate: "2026-10-24",
+    endDate: "2026-11-07",
     location: {
       "@type": "Place",
       name: "Politeknik Negeri Bandung",

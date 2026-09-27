@@ -30,7 +30,7 @@ const agroIoT = [
     desc: "Pertemuan teknis pengarahan detail pembuatan prototipe dan mekanisme Babak Final.",
   },
   {
-    date: "24 Oktober 2026",
+    date: "07 November 2026",
     title: "Presentasi & Demonstrasi Karya",
     desc: "Unjuk kerja alat (live demo), presentasi akhir di POLBAN (Bahasa Indonesia), dan Awarding.",
   },
@@ -38,7 +38,7 @@ const agroIoT = [
 
 const agriDataEvents = [
   {
-    date: "3 Agustus – 26 September 2026",
+    date: "3 Agustus – 25 Oktober 2026",
     title: "Pendaftaran & Submission Karya",
     desc: "Registrasi tim, pembayaran, dan pengunggahan artefak ke repositori GitHub. Tutup pukul 23:59 WIB.",
   },
@@ -58,7 +58,7 @@ const agriDataEvents = [
     desc: "Sesi pengarahan teknis pelaksanaan Babak Final secara daring (online).",
   },
   {
-    date: "24 Oktober 2026",
+    date: "07 November 2026",
     title: "Presentasi Final & Awarding",
     desc: "Presentasi akhir, demonstrasi model AI di POLBAN (Bahasa Indonesia), dan Awarding Ceremony.",
   },
