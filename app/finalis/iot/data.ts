@@ -11,7 +11,7 @@ export type IotFinal = {
 
 // ponytail: judge display names live here only — swap once a title is confirmed.
 export const judges = {
-  megi: "Griffani Megiyanto, SST, M.T., Ph.D.",
+  megi: "Griffani Megiyanto Rahmatullah, SST, M.T., Ph.D.",
   gia: "Gia Nuralamsyah",
   osa: "Sarosa Castrena Abadi, S.Pd., M.T.",
 } as const;
