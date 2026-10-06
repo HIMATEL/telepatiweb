@@ -53,11 +53,20 @@ export default function FinalisIotPage() {
         </div>
       </div>
 
-      <p className="font-(family-name:--font-inter) text-on-surface-variant mt-8 max-w-4xl leading-relaxed">
-        Terima kasih kepada para juri: {judges.megi}, {judges.gia}, dan {judges.osa}{" "}
-        atas waktu, ketelitian, serta dedikasi dalam memberikan penilaian dan masukan
-        berharga bagi seluruh peserta TELEPATI 8.0.
-      </p>
+      <section className="font-(family-name:--font-inter) text-on-surface-variant mt-8 max-w-4xl leading-relaxed">
+        <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface">
+          Terima kasih kepada para juri:
+        </h2>
+        <ul className="list-disc pl-6 mt-3 space-y-1">
+          <li>{judges.megi}</li>
+          <li>{judges.gia}</li>
+          <li>{judges.osa}</li>
+        </ul>
+        <p className="mt-4">
+          Terima kasih atas waktu, ketelitian, serta dedikasi dalam memberikan
+          penilaian dan masukan berharga bagi seluruh peserta TELEPATI 8.0.
+        </p>
+      </section>
 
       <Link
         href="/finalis"
