@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function FinalisPage() {
@@ -6,21 +7,70 @@ export default function FinalisPage() {
       <h1 className="font-(family-name:--font-jakarta) text-[40px] font-extrabold text-on-surface">
         Daftar Finalis
       </h1>
-      <p className="font-(family-name:--font-inter) text-on-surface-variant mt-4">
-        Hasil akhir penilaian dewan juri TELEPATI 8.0 per cabang lomba.
+      <p className="font-(family-name:--font-inter) text-on-surface-variant mt-4 max-w-2xl">
+        Pilih cabang lomba untuk melihat hasil akhir penilaian TELEPATI 8.0.
       </p>
 
-      <Link
-        href="/finalis/iot"
-        className="mt-8 inline-block bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016] hover:-translate-y-0.5 transition-transform"
-      >
-        <span className="font-(family-name:--font-jakarta) text-[20px] font-bold text-on-surface block">
-          AgroIoT Innovation Challenge
-        </span>
-        <span className="font-(family-name:--font-inter) text-on-surface-variant text-sm">
-          Lihat skor final 12 karya cabang IoT →
-        </span>
-      </Link>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+        <article className="bento-card flex flex-col h-full rounded-4xl p-8 md:p-12 relative overflow-hidden group border-2 border-on-surface hover:shadow-[5px_5px_0px_#082016] transition-all duration-300">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform" />
+          <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-on-surface bg-[#ffdf9a] text-on-surface text-[12px] leading-none tracking-wider font-medium mb-6 shadow-[2px_2px_0px_#082016]">
+            Internet of Things (IoT) Agriculture Track
+          </div>
+          <h2 className="font-(family-name:--font-jakarta) text-[32px] leading-[1.2] font-bold text-on-surface mb-4">
+            AgroIoT Innovation Challenge
+          </h2>
+          <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-on-surface-variant mb-8">
+            Lihat peringkat dan nilai akhir peserta cabang IoT.
+          </p>
+          <div className="mt-auto">
+            <Image
+              src="/images/regulation/iotimage.jpeg"
+              alt="Teknologi pertanian cerdas untuk cabang IoT"
+              width={800}
+              height={300}
+              className="w-full h-48 object-cover rounded-xl border-2 border-on-surface mb-6"
+              unoptimized
+            />
+            <Link
+              href="/finalis/iot"
+              className="neo-button-primary px-6 py-3 w-full sm:w-auto text-center"
+            >
+              Lihat finalis
+            </Link>
+          </div>
+        </article>
+
+        <article className="bento-card flex flex-col h-full rounded-4xl p-8 md:p-12 relative overflow-hidden border-2 border-on-surface">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-bl-full -z-10" />
+          <div className="inline-flex self-start items-center px-3 py-1 rounded-full border border-on-surface bg-[#ffdf9a] text-on-surface text-[12px] leading-none tracking-wider font-medium mb-6 shadow-[2px_2px_0px_#082016]">
+            AI Model Training &amp; Case Study Track
+          </div>
+          <h2 className="font-(family-name:--font-jakarta) text-[32px] leading-[1.2] font-bold text-on-surface mb-4">
+            AgriData Intelligence Race
+          </h2>
+          <p className="font-(family-name:--font-inter) text-[16px] leading-[1.6] text-on-surface-variant mb-8">
+            Hasil akhir cabang AI akan diumumkan segera.
+          </p>
+          <div className="mt-auto">
+            <Image
+              src="/images/regulation/ai_image.jpg"
+              alt="Visualisasi data pertanian untuk cabang AI"
+              width={800}
+              height={300}
+              className="w-full h-48 object-cover rounded-xl border-2 border-on-surface mb-6 grayscale opacity-75"
+              unoptimized
+            />
+            <button
+              type="button"
+              disabled
+              className="neo-button-secondary px-6 py-3 w-full sm:w-auto cursor-not-allowed opacity-55"
+            >
+              Coming soon
+            </button>
+          </div>
+        </article>
+      </div>
     </main>
   );
 }

@@ -47,21 +47,26 @@ export default function Hero() {
           <Countdown />
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="#cabang-lomba"
-            className="neo-button-primary w-full sm:w-auto"
-          >
-            Lihat kategori lomba
-          </Link>
-          {!isClosed && (
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <Link
-              href="https://dashboard.polbantelepati.tech"
-              className="neo-button-secondary w-full sm:w-auto"
+              href="#cabang-lomba"
+              className="neo-button-primary w-full sm:w-auto"
             >
-              Registrasi Sekarang
+              Lihat kategori lomba
             </Link>
-          )}
+            {!isClosed && (
+              <Link
+                href="https://dashboard.polbantelepati.tech"
+                className="neo-button-secondary w-full sm:w-auto"
+              >
+                Registrasi Sekarang
+              </Link>
+            )}
+          </div>
+          <Link href="/finalis" className="neo-button-secondary w-full sm:w-auto">
+            Lihat finalis
+          </Link>
         </div>
       </div>
     </div>

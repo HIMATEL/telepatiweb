@@ -13,21 +13,20 @@ export default function FinalisIotPage() {
         Skor Final Cabang IoT
       </h1>
       <p className="font-(family-name:--font-inter) text-on-surface-variant mt-4 max-w-3xl">
-        Hasil penilaian dewan juri {judges.megi}, {judges.gia}, dan {judges.osa}{" "}
-        atas 12 karya finalis, diurutkan berdasarkan total nilai juri.
+        Hasil akhir penilaian cabang IoT, diurutkan berdasarkan total nilai juri.
       </p>
 
       <div className="mt-8 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse font-(family-name:--font-inter) text-sm text-left border border-on-surface min-w-[960px]">
+          <table className="w-full border-collapse font-(family-name:--font-inter) text-sm text-left border border-on-surface min-w-[820px]">
             <thead>
               <tr className="bg-on-surface text-white">
                 <th className="py-2.5 px-4 border border-on-surface w-14 text-center">Rank</th>
-                <th className="py-2.5 px-4 border border-on-surface">Tim / Karya</th>
-                <th className="py-2.5 px-4 border border-on-surface">Asal PT</th>
-                <th className="py-2.5 px-4 border border-on-surface text-center">{judges.megi}</th>
-                <th className="py-2.5 px-4 border border-on-surface text-center">{judges.gia}</th>
-                <th className="py-2.5 px-4 border border-on-surface text-center">{judges.osa}</th>
+                <th className="py-2.5 px-4 border border-on-surface">Nama Tim</th>
+                <th className="py-2.5 px-4 border border-on-surface">Perguruan Tinggi</th>
+                <th className="py-2.5 px-4 border border-on-surface text-center">Kak Megi</th>
+                <th className="py-2.5 px-4 border border-on-surface text-center">Kak Gia</th>
+                <th className="py-2.5 px-4 border border-on-surface text-center">Kak Osa</th>
                 <th className="py-2.5 px-4 border border-on-surface text-center">Rata-rata</th>
                 <th className="py-2.5 px-4 border border-on-surface text-center">Total</th>
               </tr>
@@ -36,11 +35,8 @@ export default function FinalisIotPage() {
               {iotFinals.map((row) => (
                 <tr key={row.rank} className="border-b border-on-surface/20 odd:bg-primary/5">
                   <td className={`${cell} font-bold text-primary`}>{row.rank}</td>
-                  <td className="py-2.5 px-4 border border-on-surface">
-                    <span className="font-semibold text-on-surface block">{row.team}</span>
-                    <span className="text-on-surface-variant text-xs leading-snug block mt-0.5">
-                      {row.work}
-                    </span>
+                  <td className="py-2.5 px-4 border border-on-surface font-semibold text-on-surface">
+                    {row.team}
                   </td>
                   <td className="py-2.5 px-4 border border-on-surface text-on-surface-variant">
                     {row.university}
@@ -56,6 +52,12 @@ export default function FinalisIotPage() {
           </table>
         </div>
       </div>
+
+      <p className="font-(family-name:--font-inter) text-on-surface-variant mt-8 max-w-4xl leading-relaxed">
+        Terima kasih kepada para juri: {judges.megi}, {judges.gia}, dan {judges.osa}{" "}
+        atas waktu, ketelitian, serta dedikasi dalam memberikan penilaian dan masukan
+        berharga bagi seluruh peserta TELEPATI 8.0.
+      </p>
 
       <Link
         href="/finalis"
