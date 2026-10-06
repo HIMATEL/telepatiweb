@@ -14,6 +14,8 @@ export default function FinalisIotPage() {
       </h1>
       <p className="font-(family-name:--font-inter) text-on-surface-variant mt-4 max-w-3xl">
         Hasil akhir penilaian cabang IoT, diurutkan berdasarkan total nilai juri.
+        Peringkat 1 sampai 10 adalah finalis resmi. Mereka akan datang ke POLBAN
+        untuk mendemonstrasikan serta mempresentasikan karyanya di depan juri.
       </p>
 
       <div className="mt-8 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
