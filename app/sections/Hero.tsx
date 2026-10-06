@@ -64,7 +64,11 @@ export default function Hero() {
               </Link>
             )}
           </div>
-          <Link href="/finalis" className="neo-button-secondary w-full sm:w-auto">
+          <Link
+            href="/finalis"
+            className="neo-button-primary w-full sm:w-[420px]"
+            style={{ backgroundColor: "#2563eb" }}
+          >
             Lihat finalis
           </Link>
         </div>
