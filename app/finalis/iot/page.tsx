@@ -229,14 +229,14 @@ export default function FinalisIotPage() {
         </div>
       </div>
 
-      {/* Tabel 2: Rekap Nilai Babak Final (Top 10 Besar) */}
+      {/* Tabel 2: Rekap Nilai Babak Final */}
       <div className="mt-10 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
         <div className="mb-4">
           <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">
-            Rekap Nilai Babak Final (Top 10 Besar)
+            Rekap Nilai Babak Final
           </h2>
           <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant">
-            Peringkat 1 sampai 10 adalah finalis resmi yang hadir mendemonstrasikan karyanya secara langsung di hadapan dewan juri di Politeknik Negeri Bandung.
+            Rekapitulasi perolehan nilai seluruh tim peserta babak final dari dewan juri di Politeknik Negeri Bandung.
           </p>
         </div>
 

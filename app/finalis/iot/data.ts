@@ -64,8 +64,8 @@ export const iotWinners: IotWinner[] = [
 export const iotSpecialAwards: IotSpecialAward[] = [
   {
     award: "Favorite Poster",
-    team: "SmithMelon",
-    university: "Universitas Negeri Malang",
+    team: "Mejeuh Euy",
+    university: "Universitas Siliwangi",
     image: "/images/winners/favorite-poster.jpg",
     badgeBg: "bg-[#bbf7d0]",
   },
