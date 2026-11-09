@@ -36,12 +36,6 @@ export default function FinalisIotPage() {
                 {winner.university}
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-on-surface/10 flex items-center justify-between text-xs font-(family-name:--font-inter)">
-              <span className="text-on-surface-variant">Total Nilai Juri:</span>
-              <span className="font-bold text-primary text-sm tabular-nums">
-                {winner.total}
-              </span>
-            </div>
           </div>
         ))}
       </div>
@@ -64,8 +58,6 @@ export default function FinalisIotPage() {
                 <th className="py-2.5 px-4 border border-on-surface w-14 text-center">Rank</th>
                 <th className="py-2.5 px-4 border border-on-surface">Nama Tim</th>
                 <th className="py-2.5 px-4 border border-on-surface">Perguruan Tinggi</th>
-                <th className="py-2.5 px-4 border border-on-surface text-center">Rata-rata</th>
-                <th className="py-2.5 px-4 border border-on-surface text-center">Total Nilai</th>
               </tr>
             </thead>
             <tbody>
@@ -82,8 +74,6 @@ export default function FinalisIotPage() {
                   <td className="py-2.5 px-4 border border-on-surface text-on-surface-variant">
                     {row.university}
                   </td>
-                  <td className={cell}>{row.average.toFixed(2)}</td>
-                  <td className={`${cell} font-bold text-primary`}>{row.total}</td>
                 </tr>
               ))}
             </tbody>
