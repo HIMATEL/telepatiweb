@@ -12,6 +12,7 @@ export type AiWinner = {
   average: number;
   total: number;
   badgeBg: string;
+  image: string;
 };
 
 export type AiAuditNote = {
@@ -41,6 +42,7 @@ export const aiWinners: AiWinner[] = [
     average: 70.66,
     total: 141.31,
     badgeBg: "bg-[#fef08a]",
+    image: "/images/winners/juara-1-ai.jpg",
   },
   {
     rank: 2,
@@ -56,6 +58,7 @@ export const aiWinners: AiWinner[] = [
     average: 69.57,
     total: 139.13,
     badgeBg: "bg-[#e2e8f0]",
+    image: "/images/winners/juara-2-ai.jpg",
   },
 ];
 

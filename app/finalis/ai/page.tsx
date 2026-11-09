@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { aiWinners, aiAuditNotes, aiJudges } from "./data";
+
+export const metadata: Metadata = {
+  title: "Pengumuman Pemenang AgriData Intelligence Race — TELEPATI 8.0",
+  description:
+    "Hasil akhir dan pengumuman pemenang resmi dewan juri cabang AI AgriData Intelligence Race TELEPATI 8.0 POLBAN. Juara 1 diraih oleh Teknik Pertanian Unpad (Universitas Padjadjaran) dan Juara 2 diraih oleh The Power Of Kepepet (Universitas Sultan Ageng Tirtayasa).",
+  keywords: [
+    "pemenang telepati 8.0",
+    "pemenang agridata telepati 8.0",
+    "agridata intelligence race",
+    "juara telepati 8.0 polban",
+    "teknik pertanian unpad juara 1",
+    "the power of kepepet untirta",
+    "himatel polban",
+    "politeknik negeri bandung",
+  ],
+  openGraph: {
+    title: "Pengumuman Pemenang AgriData Intelligence Race — TELEPATI 8.0",
+    description:
+      "Penetapan pemenang resmi dewan juri cabang AI TELEPATI 8.0 POLBAN beserta audit evaluasi model deteksi objek.",
+    images: [
+      {
+        url: "https://polbantelepati.tech/images/winners/juara-1-ai.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Penyerahan Penghargaan Juara 1 AgriData Telepati 8.0 - Teknik Pertanian Unpad",
+      },
+    ],
+  },
+};
 
 const cell = "py-2.5 px-4 border border-on-surface text-center tabular-nums";
 
@@ -16,38 +47,81 @@ export default function FinalisAiPage() {
         Berdasarkan Berita Acara Penetapan Pemenang resmi dewan juri, hanya tim dengan model yang lolos audit verifikasi metrik (selisih skor juri terhadap klaim mandiri &le; 2%) yang berhak ditetapkan sebagai pemenang.
       </p>
 
-      {/* Podium Highlight Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-3xl">
-        {aiWinners.map((winner) => (
-          <div
-            key={winner.award}
-            className="bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016] flex flex-col justify-between"
-          >
-            <div>
+      {/* Podium Stage Display (Panggung Juara AI Bertingkat) */}
+      <section className="mt-12">
+        <div className="text-center mb-8">
+          <h2 className="font-(family-name:--font-jakarta) text-2xl font-extrabold text-on-surface">
+            Panggung Kejuaraan AgriData Intelligence Race
+          </h2>
+          <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant mt-1">
+            Penetapan resmi Juara 1 dan Juara 2 AgriData Intelligence Race TELEPATI 8.0
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end max-w-3xl mx-auto">
+          {aiWinners.map((winner) => {
+            const isFirst = winner.rank === 1;
+
+            return (
               <div
-                className={`inline-block px-3 py-1 rounded-full border border-on-surface ${winner.badgeBg} text-on-surface font-(family-name:--font-jakarta) font-bold text-xs uppercase tracking-wider mb-4 shadow-[1.5px_1.5px_0px_#082016]`}
+                key={winner.award}
+                className={`bg-white border-2 border-on-surface rounded-2xl overflow-hidden shadow-[4px_4px_0px_#082016] flex flex-col transition-transform hover:-translate-y-1 ${
+                  isFirst
+                    ? "order-1 border-primary/80 ring-2 ring-primary/20 shadow-[6px_6px_0px_#006b30]"
+                    : "order-2"
+                }`}
               >
-                {winner.award}
+                {/* Photo Header */}
+                <div className="relative w-full aspect-4/3 bg-surface-container-low border-b-2 border-on-surface overflow-hidden">
+                  <Image
+                    src={winner.image}
+                    alt={`Penyerahan penghargaan ${winner.award} AgriData Telepati 8.0 kepada ${winner.team} (${winner.university})`}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full border border-on-surface ${winner.badgeBg} text-on-surface font-(family-name:--font-jakarta) font-extrabold text-xs uppercase tracking-wider shadow-[2px_2px_0px_#082016]`}
+                    >
+                      {winner.award}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Podium Pedestal / Content */}
+                <div
+                  className={`p-6 flex flex-col justify-between ${
+                    isFirst
+                      ? "bg-linear-to-b from-primary/5 to-primary/15 md:min-h-[170px]"
+                      : "bg-slate-50 md:min-h-[150px]"
+                  }`}
+                >
+                  <div>
+                    <h3 className="font-(family-name:--font-jakarta) text-xl font-extrabold text-on-surface leading-snug">
+                      {winner.team}
+                    </h3>
+                    <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant font-medium mt-1">
+                      {winner.university}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-on-surface/10 flex items-center justify-between text-xs">
+                    <span className="font-semibold text-on-surface-variant">
+                      Skor Total Juri:
+                    </span>
+                    <span className="font-extrabold text-primary text-sm tabular-nums">
+                      {winner.total.toFixed(2)}%
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h2 className="font-(family-name:--font-jakarta) text-xl font-extrabold text-on-surface">
-                {winner.team}
-              </h2>
-              <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant mt-1">
-                {winner.university}
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-on-surface/10 flex items-center justify-between text-xs font-(family-name:--font-inter)">
-              <span className="text-on-surface-variant">Skor Total Juri:</span>
-              <span className="font-bold text-primary text-sm tabular-nums">
-                {winner.total.toFixed(2)}%
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
+            );
+          })}
+        </div>
+      </section>
 
       {/* Verified Winners Table */}
-      <div className="mt-12 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
+      <div className="mt-14 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
           <div>
             <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">

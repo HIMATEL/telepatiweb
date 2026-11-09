@@ -39,7 +39,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/finalis`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/finalis/iot`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/finalis/ai`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy-policy`,

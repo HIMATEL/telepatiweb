@@ -1,5 +1,34 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Pengumuman Pemenang — TELEPATI 8.0 POLBAN",
+  description:
+    "Daftar pemenang resmi kompetisi nasional TELEPATI 8.0 Politeknik Negeri Bandung (POLBAN) untuk cabang AgroIoT Innovation Challenge dan AgriData Intelligence Race.",
+  keywords: [
+    "pemenang telepati 8.0",
+    "juara telepati 8.0 polban",
+    "telepati 8.0 polban",
+    "himatel polban",
+    "agroit innovation challenge",
+    "agridata intelligence race",
+    "politeknik negeri bandung",
+  ],
+  openGraph: {
+    title: "Pengumuman Pemenang — TELEPATI 8.0 POLBAN",
+    description:
+      "Daftar pemenang resmi kompetisi nasional TELEPATI 8.0 POLBAN cabang AgroIoT dan AgriData.",
+    images: [
+      {
+        url: "https://polbantelepati.tech/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TELEPATI 8.0 - Growing The Golden Future",
+      },
+    ],
+  },
+};
 
 export default function FinalisPage() {
   return (

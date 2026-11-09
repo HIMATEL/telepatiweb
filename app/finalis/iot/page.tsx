@@ -1,6 +1,37 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { iotFinals, iotWinners, iotSpecialAwards, judges } from "./data";
+
+export const metadata: Metadata = {
+  title: "Pengumuman Pemenang AgroIoT Innovation Challenge — TELEPATI 8.0",
+  description:
+    "Hasil akhir dan penetapan pemenang resmi dewan juri cabang AgroIoT Innovation Challenge TELEPATI 8.0 POLBAN. Juara 1 diraih oleh Para pemula (Politeknik Astra), Juara 2 Kadang +1 Kadang -1 (Telkom University), dan Juara 3 berat bersih 500 ML (UPI).",
+  keywords: [
+    "pemenang telepati 8.0",
+    "pemenang agroit telepati 8.0",
+    "agroit innovation challenge",
+    "juara telepati 8.0 polban",
+    "para pemula politeknik astra",
+    "kadang +1 kadang -1 telkom university",
+    "berat bersih 500 ml upi",
+    "himatel polban",
+    "politeknik negeri bandung",
+  ],
+  openGraph: {
+    title: "Pengumuman Pemenang AgroIoT Innovation Challenge — TELEPATI 8.0",
+    description:
+      "Penetapan pemenang resmi dewan juri cabang IoT TELEPATI 8.0 POLBAN beserta rekap nilai lengkap Top 10 babak final.",
+    images: [
+      {
+        url: "https://polbantelepati.tech/images/winners/juara-1-iot.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Penyerahan Penghargaan Juara 1 AgroIoT Telepati 8.0 - Para pemula Politeknik Astra",
+      },
+    ],
+  },
+};
 
 const cell = "py-2.5 px-4 border border-on-surface text-center tabular-nums";
 
@@ -148,13 +179,24 @@ export default function FinalisIotPage() {
 
       {/* Tabel 1: Penetapan Pemenang Resmi Dewan Juri */}
       <div className="mt-14 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
-        <div className="mb-4">
-          <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">
-            Penetapan Pemenang Resmi Dewan Juri
-          </h2>
-          <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant">
-            Daftar peraih gelar Juara 1, Juara 2, dan Juara 3 AgroIoT Innovation Challenge TELEPATI 8.0.
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <div>
+            <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">
+              Penetapan Pemenang Resmi Dewan Juri
+            </h2>
+            <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant">
+              Daftar peraih gelar Juara 1, Juara 2, dan Juara 3 AgroIoT Innovation Challenge TELEPATI 8.0.
+            </p>
+          </div>
+          <a
+            href="/documents/berita-acara-agroit.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-on-surface bg-[#ffdf9a] text-on-surface text-sm font-bold shadow-[2px_2px_0px_#082016] hover:shadow-[4px_4px_0px_#082016] transition-all w-fit"
+          >
+            <span>📄</span>
+            <span>Lihat Berita Acara (PDF)</span>
+          </a>
         </div>
 
         <div className="overflow-x-auto">
