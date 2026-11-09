@@ -1,9 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
-import { iotFinals, iotWinners, judges } from "./data";
+import { iotFinals, iotWinners, iotSpecialAwards, judges } from "./data";
 
 const cell = "py-2.5 px-4 border border-on-surface text-center tabular-nums";
 
 export default function FinalisIotPage() {
+  // Sort podium for Olympic-style display: Rank 2 (Left), Rank 1 (Center/Highest), Rank 3 (Right)
+  const podiumWinners = [
+    iotWinners.find((w) => w.rank === 2)!,
+    iotWinners.find((w) => w.rank === 1)!,
+    iotWinners.find((w) => w.rank === 3)!,
+  ];
+
   return (
     <main className="pt-32 pb-24 max-w-6xl mx-auto px-6">
       <p className="font-(family-name:--font-inter) text-primary text-sm font-semibold tracking-widest uppercase">
@@ -16,32 +24,130 @@ export default function FinalisIotPage() {
         Selamat kepada para pemenang dan seluruh tim finalis AgroIoT Innovation Challenge TELEPATI 8.0 Politeknik Negeri Bandung.
       </p>
 
-      {/* Podium Highlight Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        {iotWinners.map((winner) => (
-          <div
-            key={winner.award}
-            className="bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016] flex flex-col justify-between"
-          >
-            <div>
-              <div
-                className={`inline-block px-3 py-1 rounded-full border border-on-surface ${winner.badgeBg} text-on-surface font-(family-name:--font-jakarta) font-bold text-xs uppercase tracking-wider mb-4 shadow-[1.5px_1.5px_0px_#082016]`}
-              >
-                {winner.award}
-              </div>
-              <h2 className="font-(family-name:--font-jakarta) text-xl font-extrabold text-on-surface">
-                {winner.team}
-              </h2>
-              <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant mt-1">
-                {winner.university}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* Podium Stage Display (Bertingkat ala Panggung Juara) */}
+      <section className="mt-12">
+        <div className="text-center mb-8">
+          <h2 className="font-(family-name:--font-jakarta) text-2xl font-extrabold text-on-surface">
+            Panggung Kejuaraan TELEPATI 8.0
+          </h2>
+          <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant mt-1">
+            Penetapan resmi Juara 1, Juara 2, dan Juara 3 AgroIoT Innovation Challenge
+          </p>
+        </div>
 
-      {/* Tabel Penetapan Pemenang Resmi (seperti di page AI) */}
-      <div className="mt-12 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end max-w-5xl mx-auto">
+          {podiumWinners.map((winner) => {
+            const isFirst = winner.rank === 1;
+            const isSecond = winner.rank === 2;
+
+            return (
+              <div
+                key={winner.award}
+                className={`bg-white border-2 border-on-surface rounded-2xl overflow-hidden shadow-[4px_4px_0px_#082016] flex flex-col transition-transform hover:-translate-y-1 ${
+                  isFirst
+                    ? "order-1 md:order-2 border-primary/80 ring-2 ring-primary/20 shadow-[6px_6px_0px_#006b30]"
+                    : isSecond
+                    ? "order-2 md:order-1"
+                    : "order-3 md:order-3"
+                }`}
+              >
+                {/* Photo Header */}
+                <div className="relative w-full aspect-4/3 bg-surface-container-low border-b-2 border-on-surface overflow-hidden">
+                  <Image
+                    src={winner.image}
+                    alt={`Penyerahan penghargaan ${winner.award} - ${winner.team}`}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full border border-on-surface ${winner.badgeBg} text-on-surface font-(family-name:--font-jakarta) font-extrabold text-xs uppercase tracking-wider shadow-[2px_2px_0px_#082016]`}
+                    >
+                      {winner.award}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Podium Pedestal / Content */}
+                <div
+                  className={`p-6 flex flex-col justify-between ${
+                    isFirst
+                      ? "bg-linear-to-b from-primary/5 to-primary/15 md:min-h-[170px]"
+                      : isSecond
+                      ? "bg-slate-50 md:min-h-[150px]"
+                      : "bg-orange-50/50 md:min-h-[135px]"
+                  }`}
+                >
+                  <div>
+                    <h3 className="font-(family-name:--font-jakarta) text-xl font-extrabold text-on-surface leading-snug">
+                      {winner.team}
+                    </h3>
+                    <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant font-medium mt-1">
+                      {winner.university}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-on-surface/10 flex items-center justify-between text-xs">
+                    <span className="font-semibold text-on-surface-variant">
+                      Peringkat:
+                    </span>
+                    <span className="font-extrabold text-primary text-sm tabular-nums">
+                      Rank #{winner.rank}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Special Category Awards (Favorite Poster & Best Presentation) */}
+      <section className="mt-14">
+        <div className="mb-6">
+          <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface">
+            Penghargaan Kategori Khusus
+          </h2>
+          <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant">
+            Apresiasi dewan juri untuk presentasi terbaik dan poster terfavorit peserta final.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {iotSpecialAwards.map((item) => (
+            <div
+              key={item.award}
+              className="bg-white border-2 border-on-surface rounded-2xl overflow-hidden shadow-[3px_3px_0px_#082016] flex flex-col sm:flex-row group"
+            >
+              <div className="relative w-full sm:w-2/5 aspect-4/3 sm:aspect-auto sm:min-h-[180px] border-b-2 sm:border-b-0 sm:border-r-2 border-on-surface bg-surface-container-low overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={`Penghargaan ${item.award} - ${item.team}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-center sm:w-3/5">
+                <span
+                  className={`inline-block px-3 py-1 rounded-full border border-on-surface ${item.badgeBg} text-on-surface font-(family-name:--font-jakarta) font-extrabold text-xs uppercase tracking-wider shadow-[1.5px_1.5px_0px_#082016] w-fit mb-3`}
+                >
+                  {item.award}
+                </span>
+                <h3 className="font-(family-name:--font-jakarta) text-xl font-extrabold text-on-surface">
+                  {item.team}
+                </h3>
+                <p className="font-(family-name:--font-inter) text-sm text-on-surface-variant font-medium mt-1">
+                  {item.university}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tabel 1: Penetapan Pemenang Resmi Dewan Juri */}
+      <div className="mt-14 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
         <div className="mb-4">
           <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">
             Penetapan Pemenang Resmi Dewan Juri
@@ -81,7 +187,7 @@ export default function FinalisIotPage() {
         </div>
       </div>
 
-      {/* Tabel Rekap Skor Top 10 / Seluruh Finalis Presentasi */}
+      {/* Tabel 2: Rekap Nilai Babak Final (Top 10 Besar) */}
       <div className="mt-10 bg-white border-2 border-on-surface rounded-lg p-6 shadow-[3px_3px_0px_#082016]">
         <div className="mb-4">
           <h2 className="font-(family-name:--font-jakarta) text-xl font-bold text-on-surface mb-1">

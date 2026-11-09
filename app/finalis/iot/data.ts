@@ -14,8 +14,17 @@ export type IotWinner = {
   award: string;
   team: string;
   university: string;
-  average: number;
-  total: number;
+  badgeBg: string;
+  image: string;
+  podiumOrder: number; // 1 for 1st (center/highest), 2 for 2nd (left), 3 for 3rd (right)
+  podiumHeight: string;
+};
+
+export type IotSpecialAward = {
+  award: string;
+  team: string;
+  university: string;
+  image: string;
   badgeBg: string;
 };
 
@@ -25,26 +34,46 @@ export const iotWinners: IotWinner[] = [
     award: "Juara 1",
     team: "Para pemula",
     university: "Politeknik Astra",
-    average: 78.42,
-    total: 235.25,
     badgeBg: "bg-[#fef08a]",
+    image: "/images/winners/juara-1-iot.jpg",
+    podiumOrder: 1,
+    podiumHeight: "md:h-[440px]",
   },
   {
     rank: 2,
     award: "Juara 2",
     team: "Kadang +1 Kadang -1",
     university: "Telkom University",
-    average: 81.42,
-    total: 244.25,
     badgeBg: "bg-[#e2e8f0]",
+    image: "/images/winners/juara-2-iot.jpg",
+    podiumOrder: 2,
+    podiumHeight: "md:h-[390px]",
   },
   {
     rank: 3,
     award: "Juara 3",
     team: "berat bersih 500 ML",
     university: "Universitas Pendidikan Indonesia",
-    average: 86.75,
-    total: 260.25,
+    badgeBg: "bg-[#fed7aa]",
+    image: "/images/winners/juara-3-iot.jpg",
+    podiumOrder: 3,
+    podiumHeight: "md:h-[360px]",
+  },
+];
+
+export const iotSpecialAwards: IotSpecialAward[] = [
+  {
+    award: "Favorite Poster",
+    team: "SmithMelon",
+    university: "Universitas Negeri Malang",
+    image: "/images/winners/favorite-poster.jpg",
+    badgeBg: "bg-[#bbf7d0]",
+  },
+  {
+    award: "Best Presentation",
+    team: "berat bersih 500 ML",
+    university: "Universitas Pendidikan Indonesia",
+    image: "/images/winners/best-presentation.jpg",
     badgeBg: "bg-[#fed7aa]",
   },
 ];
