@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Countdown from "../components/Countdown";
 import { REGISTRATION_DEADLINE } from "../utils/deadline";
 
 export default function Hero() {
@@ -42,18 +41,13 @@ export default function Hero() {
           2045&quot;
         </p>
 
-        {/* Countdown */}
-        <div className="mb-10">
-          <Countdown />
-        </div>
-
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <Link
-              href="#cabang-lomba"
+              href="/finalis"
               className="neo-button-primary w-full sm:w-auto"
             >
-              Lihat kategori lomba
+              Lihat pemenang
             </Link>
             {!isClosed && (
               <Link
@@ -64,13 +58,9 @@ export default function Hero() {
               </Link>
             )}
           </div>
-          <Link
-            href="/finalis"
-            className="neo-button-primary w-full sm:w-[420px]"
-            style={{ backgroundColor: "#2563eb" }}
-          >
-            Lihat finalis
-          </Link>
+          <p className="font-(family-name:--font-inter) text-base md:text-lg font-medium text-on-surface-variant text-center mt-2">
+            Sampai jumpa di Perlombaan Telepati Selanjutnya!
+          </p>
         </div>
       </div>
     </div>

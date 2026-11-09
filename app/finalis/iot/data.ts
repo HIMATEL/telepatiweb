@@ -9,6 +9,46 @@ export type IotFinal = {
   total: number;
 };
 
+export type IotWinner = {
+  rank: number;
+  award: string;
+  team: string;
+  university: string;
+  average: number;
+  total: number;
+  badgeBg: string;
+};
+
+export const iotWinners: IotWinner[] = [
+  {
+    rank: 1,
+    award: "Juara 1",
+    team: "Para pemula",
+    university: "Politeknik Astra",
+    average: 78.42,
+    total: 235.25,
+    badgeBg: "bg-[#fef08a]",
+  },
+  {
+    rank: 2,
+    award: "Juara 2",
+    team: "Kadang +1 Kadang -1",
+    university: "Telkom University",
+    average: 81.42,
+    total: 244.25,
+    badgeBg: "bg-[#e2e8f0]",
+  },
+  {
+    rank: 3,
+    award: "Juara 3",
+    team: "berat bersih 500 ML",
+    university: "Universitas Pendidikan Indonesia",
+    average: 86.75,
+    total: 260.25,
+    badgeBg: "bg-[#fed7aa]",
+  },
+];
+
 // ponytail: judge display names live here only — swap once a title is confirmed.
 export const judges = {
   megi: "Griffani Megiyanto Rahmatullah, SST, M.T., Ph.D.",
